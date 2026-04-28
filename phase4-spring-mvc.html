@@ -276,15 +276,21 @@
                 </section>
 
                 <section id="interview-prep">
-                    <h2 class="premium-title">15. Interview Prep (3 Levels)</h2>
+                    <h2 class="premium-title">15. Interview Preparation (3 Levels)</h2>
                     <div class="interview-card">
-                        <strong>Beginner:</strong> What is @RequestMapping and how is it different from @GetMapping?
+                        <span class="badge badge-info">Beginner</span>
+                        <strong>Q: What is the purpose of @RestController in Spring MVC?</strong>
+                        <p>A: It's a specialized version of <code>@Controller</code> that includes <code>@ResponseBody</code> on every method. It simplifies the creation of RESTful web services by automatically serializing return objects into JSON or XML.</p>
                     </div>
                     <div class="interview-card">
-                        <strong>Intermediate:</strong> How does Spring MVC handle data binding from a form to a Java object?
+                        <span class="badge badge-warning">Intermediate</span>
+                        <strong>Q: How does the DispatcherServlet route a request to a Controller?</strong>
+                        <p>A: The <code>DispatcherServlet</code> uses <code>HandlerMapping</code> (like <code>RequestMappingHandlerMapping</code>) to find the appropriate controller method based on the URL and HTTP method. It then uses a <code>HandlerAdapter</code> to actually invoke the method.</p>
                     </div>
                     <div class="interview-card">
-                        <strong>Advanced:</strong> Explain the <strong>DeferredResult</strong> and <strong>Callable</strong> for asynchronous request processing in Spring MVC.
+                        <span class="badge badge-error">Advanced</span>
+                        <strong>Q: Explain the flow of an HTTP request through the Spring MVC stack.</strong>
+                        <p>A: 1. Request hits <code>DispatcherServlet</code>. 2. <code>HandlerMapping</code> identifies the Controller. 3. <code>HandlerInterceptor</code> (pre-handle) is executed. 4. Controller method is executed. 5. <code>HandlerInterceptor</code> (post-handle) is executed. 6. <code>ViewResolver</code> (if not <code>@ResponseBody</code>) resolves the view. 7. View is rendered and <code>afterCompletion</code> is called.</p>
                     </div>
                 </section>
 

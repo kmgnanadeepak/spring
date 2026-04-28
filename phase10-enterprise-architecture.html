@@ -121,14 +121,32 @@
                 </section>
 
                 <section id="topic-breakdown">
-                    <h2 class="premium-title">4. Core Topic Breakdown</h2>
+                    <h2 class="premium-title">4. Deep Topic-by-Topic Breakdown</h2>
                     <div class="module-card">
+                        <h3>I. Domain-Driven Design (DDD)</h3>
+                        <p>Aligning software design with business complexity.</p>
                         <ul>
-                            <li><strong>Strategic DDD:</strong> Bounded Contexts, Context Mapping, Ubiquitous Language.</li>
-                            <li><strong>Tactical DDD:</strong> Entities, Value Objects, Aggregates, Domain Events.</li>
-                            <li><strong>Advanced Architecture:</strong> Ports & Adapters (Hexagonal), CQRS, Event Sourcing.</li>
-                            <li><strong>System Design at Scale:</strong> Load Balancing, Caching, Databases (NoSQL vs SQL), CDNs.</li>
-                            <li><strong>Architectural Governance:</strong> ADRs (Architecture Decision Records), Tech Debt Management.</li>
+                            <li><strong>Bounded Contexts:</strong> Defining explicit boundaries where a particular domain model is valid.</li>
+                            <li><strong>Ubiquitous Language:</strong> Creating a shared vocabulary between developers and domain experts.</li>
+                            <li><strong>Aggregate Roots:</strong> Ensuring data consistency by grouping entities and value objects under a single entry point.</li>
+                        </ul>
+                    </div>
+                    <div class="module-card">
+                        <h3>II. Advanced Microservices Patterns</h3>
+                        <p>Solving the challenges of distributed data and communication.</p>
+                        <ul>
+                            <li><strong>CQRS (Command Query Responsibility Segregation):</strong> Separating write operations from read operations to optimize performance and scalability.</li>
+                            <li><strong>Event Sourcing:</strong> Persisting the state of an entity as a sequence of state-changing events.</li>
+                            <li><strong>Service Mesh & Sidecars:</strong> Offloading networking and security concerns to a dedicated infrastructure layer.</li>
+                        </ul>
+                    </div>
+                    <div class="module-card">
+                        <h3>III. Cloud-Native & Reactive Systems</h3>
+                        <p>Building highly responsive and resilient applications.</p>
+                        <ul>
+                            <li><strong>The Reactive Manifesto:</strong> Understanding Responsive, Resilient, Elastic, and Message-Driven systems.</li>
+                            <li><strong>Serverless Architecture:</strong> Leveraging FaaS (Function as a Service) for event-driven, cost-effective scaling.</li>
+                            <li><strong>Chaos Engineering:</strong> Intentionally injecting failures to test system resiliency and improve mean time to recovery (MTTR).</li>
                         </ul>
                     </div>
                 </section>
@@ -278,18 +296,21 @@
                 </section>
 
                 <section id="interview-prep">
-                    <h2 class="premium-title">15. Interview Preparation</h2>
+                    <h2 class="premium-title">15. Interview Preparation (3 Levels)</h2>
                     <div class="interview-card">
-                        <strong>Beginner: What is the difference between monolithic and microservices architecture?</strong>
-                        <p>Monolith is a single deployable unit; microservices are independently deployable units focused on specific business capabilities.</p>
+                        <span class="badge badge-info">Beginner</span>
+                        <strong>Q: What is the difference between monolithic and microservices architecture?</strong>
+                        <p>A: A Monolith is a single, unified unit where all business functions are tightly coupled. Microservices are a suite of small, independent services that communicate via APIs. Monoliths are easier to develop and deploy initially, while Microservices offer better scalability and independent deployability for complex systems.</p>
                     </div>
                     <div class="interview-card">
-                        <strong>Intermediate: Explain the Saga Pattern.</strong>
-                        <p>A sequence of local transactions where each transaction updates data within a single service and publishes an event to trigger the next transaction.</p>
+                        <span class="badge badge-warning">Intermediate</span>
+                        <strong>Q: Explain the Saga Pattern and why it's used in Microservices.</strong>
+                        <p>A: Since microservices have decentralized data, we cannot use traditional ACID transactions across services. A Saga is a sequence of local transactions. If one local transaction fails, the Saga executes **Compensating Transactions** to undo the changes made by previous local transactions, ensuring eventual consistency.</p>
                     </div>
                     <div class="interview-card">
-                        <strong>Advanced: Design a system like YouTube or Netflix.</strong>
-                        <p>Discuss video transcoding (asynchronous), CDN usage (latency), metadata storage (NoSQL for scale), and recommendation engines (Machine Learning/Big Data).</p>
+                        <span class="badge badge-error">Advanced</span>
+                        <strong>Q: Design a high-availability system for a global bookstore with millions of users.</strong>
+                        <p>A: 1. **Global Load Balancing:** Route users to the nearest regional data center. 2. **Multi-Region Replication:** Use databases like Aurora Global or Cosmos DB for low-latency reads. 3. **Caching Strategy:** Multi-level caching (CDN for static assets, Redis for session/catalog data). 4. **Resiliency:** Implement Circuit Breakers and Bulkheads to prevent regional failures from affecting the entire system. 5. **Event-Driven Updates:** Use Kafka to synchronize inventory and orders across regions asynchronously.</p>
                     </div>
                 </section>
 

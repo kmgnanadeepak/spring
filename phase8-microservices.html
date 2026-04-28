@@ -121,14 +121,32 @@
                 </section>
 
                 <section id="topic-breakdown">
-                    <h2 class="premium-title">4. Core Topic Breakdown</h2>
+                    <h2 class="premium-title">4. Deep Topic-by-Topic Breakdown</h2>
                     <div class="module-card">
+                        <h3>I. Distributed Systems Infrastructure</h3>
+                        <p>Building the foundation for resilient service communication.</p>
                         <ul>
-                            <li><strong>Distributed Infrastructure:</strong> Eureka Discovery and Spring Cloud Config.</li>
-                            <li><strong>Inter-service Communication:</strong> REST with OpenFeign and Event-driven with Kafka.</li>
-                            <li><strong>Edge Services:</strong> API Gateway routing, filters, and security.</li>
-                            <li><strong>Resilience Patterns:</strong> Circuit Breakers, Retries, and Rate Limiters.</li>
-                            <li><strong>Observability:</strong> Distributed tracing with Micrometer and Zipkin.</li>
+                            <li><strong>Service Registry (Eureka):</strong> The heartbeat mechanism that allows services to discover each other without hardcoded IPs.</li>
+                            <li><strong>API Gateway (Spring Cloud Gateway):</strong> The single entry point for clients, handling cross-cutting concerns like Rate Limiting, CORS, and Auth.</li>
+                            <li><strong>Externalized Configuration:</strong> Using Spring Cloud Config with Git to manage environment-specific properties (Dev, Stage, Prod) centrally.</li>
+                        </ul>
+                    </div>
+                    <div class="module-card">
+                        <h3>II. Resiliency & Fault Tolerance</h3>
+                        <p>Ensuring the system survives when components fail.</p>
+                        <ul>
+                            <li><strong>Circuit Breaker Pattern (Resilience4j):</strong> Preventing cascading failures by "tripping" when a downstream service is unhealthy.</li>
+                            <li><strong>Bulkhead Pattern:</strong> Isolating resources (thread pools) to ensure one failing service doesn't exhaust all system resources.</li>
+                            <li><strong>Retries & Timeouts:</strong> Configuring intelligent fallbacks to improve user experience during transient network issues.</li>
+                        </ul>
+                    </div>
+                    <div class="module-card">
+                        <h3>III. Inter-Service Communication</h3>
+                        <p>Synchronous vs. Asynchronous patterns for data exchange.</p>
+                        <ul>
+                            <li><strong>Feign Clients:</strong> Declarative REST clients that integrate seamlessly with Load Balancers (Ribbon/LoadBalancer).</li>
+                            <li><strong>Event-Driven Messaging:</strong> Using RabbitMQ or Kafka to decouple services and handle high-volume transactions asynchronously.</li>
+                            <li><strong>Distributed Tracing (Micrometer Observation/Zipkin):</strong> Tracking a single request as it flows through multiple microservices to identify bottlenecks.</li>
                         </ul>
                     </div>
                 </section>
@@ -260,14 +278,21 @@
                 </section>
 
                 <section id="interview-prep">
-                    <h2 class="premium-title">15. Interview Preparation</h2>
+                    <h2 class="premium-title">15. Interview Preparation (3 Levels)</h2>
                     <div class="interview-card">
-                        <strong>Q: What is the N+1 problem in microservices?</strong>
-                        <p>A: It's when a client needs data from N services, causing N+1 network calls. Fix it using GraphQL or Backend-for-Frontend (BFF) patterns.</p>
+                        <span class="badge badge-info">Beginner</span>
+                        <strong>Q: What are the main characteristics of a Microservices architecture?</strong>
+                        <p>A: Independent deployability, decentralized data management, specialized business capabilities (Single Responsibility), and automated infrastructure. Each service is a separate process communicating over lightweight protocols like HTTP or Messaging.</p>
                     </div>
                     <div class="interview-card">
-                        <strong>Q: Difference between Orchestration and Choreography?</strong>
-                        <p>A: Orchestration uses a central 'brain' to coordinate; Choreography relies on services reacting to events independently.</p>
+                        <span class="badge badge-warning">Intermediate</span>
+                        <strong>Q: How does Service Discovery solve the "Dynamic Port" problem?</strong>
+                        <p>A: In cloud environments, service instances are frequently created and destroyed with dynamic IP addresses and ports. A Service Registry (like Eureka) acts as a phonebook. Services register themselves on startup, and clients query the registry to find the current location of a service, enabling client-side load balancing.</p>
+                    </div>
+                    <div class="interview-card">
+                        <span class="badge badge-error">Advanced</span>
+                        <strong>Q: Explain the CAP Theorem and why Microservices usually favor AP (Availability/Partition Tolerance).</strong>
+                        <p>A: CAP states that a distributed system can only provide two of three guarantees: Consistency, Availability, and Partition Tolerance. In a distributed network, partitions *will* happen. Therefore, we must choose between Consistency (CP) and Availability (AP). Most microservices favor AP to ensure the system remains responsive, using **Eventual Consistency** (Saga patterns) to synchronize data across services.</p>
                     </div>
                 </section>
 

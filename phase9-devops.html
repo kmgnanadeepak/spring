@@ -121,14 +121,32 @@
                 </section>
 
                 <section id="topic-breakdown">
-                    <h2 class="premium-title">4. Core Topic Breakdown</h2>
+                    <h2 class="premium-title">4. Deep Topic-by-Topic Breakdown</h2>
                     <div class="module-card">
+                        <h3>I. Containerization Internals</h3>
+                        <p>Beyond simple Dockerfiles: mastering image optimization and security.</p>
                         <ul>
-                            <li><strong>Docker Foundations:</strong> Layers, Images vs Containers, Multi-stage builds.</li>
-                            <li><strong>CI/CD Pipelines:</strong> Build, Test, Scan, and Deploy automation.</li>
-                            <li><strong>Kubernetes Architecture:</strong> Nodes, Pods, Deployments, Services, and Ingress.</li>
-                            <li><strong>Cloud Platforms:</strong> Deploying to AWS (EKS), Azure (AKS), or Google Cloud (GKE).</li>
-                            <li><strong>Monitoring & Observability:</strong> Prometheus, Grafana, and ELK Stack.</li>
+                            <li><strong>Layer Caching:</strong> Understanding how Docker caches instructions to speed up builds and reduce image size.</li>
+                            <li><strong>Multi-stage Builds:</strong> Separating the build environment from the runtime environment to create tiny, production-ready images.</li>
+                            <li><strong>Namespace & Cgroups:</strong> The Linux kernel features that provide process isolation and resource limiting for containers.</li>
+                        </ul>
+                    </div>
+                    <div class="module-card">
+                        <h3>II. Kubernetes Orchestration</h3>
+                        <p>Managing the lifecycle of distributed applications at scale.</p>
+                        <ul>
+                            <li><strong>Declarative State:</strong> How K8s uses YAML manifests to maintain the "Desired State" of the cluster.</li>
+                            <li><strong>Self-Healing:</strong> The internal reconciliation loops that automatically restart failed pods or reschedule them on healthy nodes.</li>
+                            <li><strong>Service Mesh (Istio):</strong> Adding a sidecar proxy to handle advanced traffic routing, mutual TLS (mTLS), and observability.</li>
+                        </ul>
+                    </div>
+                    <div class="module-card">
+                        <h3>III. CI/CD Pipeline Automation</h3>
+                        <p>Building the "Road to Production" with trust and speed.</p>
+                        <ul>
+                            <li><strong>GitOps (ArgoCD):</strong> Using Git as the single source of truth for infrastructure and application state.</li>
+                            <li><strong>Quality Gates:</strong> Integrating SonarQube, Snyk, and unit tests into the pipeline to block insecure or buggy code.</li>
+                            <li><strong>Deployment Strategies:</strong> Blue-Green for instant rollbacks vs. Canary for risk mitigation in high-traffic systems.</li>
                         </ul>
                     </div>
                 </section>
@@ -278,18 +296,21 @@
                 </section>
 
                 <section id="interview-prep">
-                    <h2 class="premium-title">15. Interview Preparation</h2>
+                    <h2 class="premium-title">15. Interview Preparation (3 Levels)</h2>
                     <div class="interview-card">
-                        <strong>Beginner: What is the difference between an image and a container?</strong>
-                        <p>An image is a static blueprint; a container is a running instance of that blueprint with its own isolated filesystem and processes.</p>
+                        <span class="badge badge-info">Beginner</span>
+                        <strong>Q: What is the difference between an image and a container?</strong>
+                        <p>A: An image is a read-only blueprint containing the application and all its dependencies. A container is a runnable instance of an image, which adds a thin read-write layer on top of the image to handle runtime changes.</p>
                     </div>
                     <div class="interview-card">
-                        <strong>Intermediate: Explain the Kubernetes 'Control Plane' components.</strong>
-                        <p>Includes the API Server (entry point), etcd (state store), Scheduler (places pods), and Controller Manager (handles state transitions).</p>
+                        <span class="badge badge-warning">Intermediate</span>
+                        <strong>Q: Explain the Kubernetes 'Control Plane' components.</strong>
+                        <p>A: The Control Plane manages the cluster's state. Key components include: 1. **kube-apiserver** (the entry point), 2. **etcd** (the cluster's database), 3. **kube-scheduler** (decides which pod goes to which node), and 4. **kube-controller-manager** (ensures the actual state matches the desired state).</p>
                     </div>
                     <div class="interview-card">
-                        <strong>Advanced: How would you implement a zero-downtime deployment for a stateful application?</strong>
-                        <p>Discuss Blue-Green vs Rolling updates, database migration strategies (Flyway/Liquibase), and session management (Redis).</p>
+                        <span class="badge badge-error">Advanced</span>
+                        <strong>Q: How would you implement a zero-downtime deployment for a stateful application?</strong>
+                        <p>A: This requires a multi-step approach: 1. Use **Blue-Green** or **Canary** deployment patterns to shift traffic gradually. 2. Implement **Backward Compatibility** in the database (e.g., keeping old columns while migrating to new ones). 3. Use externalized session management (e.g., Redis) so that user sessions survive when application instances are replaced. 4. Use **Readiness Probes** to ensure the new version is fully initialized before it receives traffic.</p>
                     </div>
                 </section>
 
