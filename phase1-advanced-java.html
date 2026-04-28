@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 1: Advanced Java | Java Enterprise Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="docs-page">
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                Java<span>Academy</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resources.html">Resources</a>
+                <a href="projects.html">Projects</a>
+                <a href="interview.html">Interview</a>
+                <a href="career.html">Career</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="docs-layout">
+        <aside class="sidebar">
+            <div class="sidebar-title">Phase 1 Navigation</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#overview" class="active">1. Phase Overview</a></li>
+                    <li><a href="#why-matters">2. Why This Phase Matters</a></li>
+                    <li><a href="#theoretical-roadmap">3. Theoretical Roadmap</a></li>
+                    <li><a href="#topic-breakdown">4. Topic Breakdown</a></li>
+                    <li><a href="#subtopic-curriculum">5. Subtopic Curriculum</a></li>
+                    <li><a href="#progression">6. Chronological Progression</a></li>
+                    <li><a href="#mastery-roadmap">7. Weekly Mastery</a></li>
+                    <li><a href="#practice-tasks">8. Practice Tasks</a></li>
+                    <li><a href="#exercises">9. Exercises</a></li>
+                    <li><a href="#theory-checkpoints">10. Theory Checkpoints</a></li>
+                    <li><a href="#mini-projects">11. Mini Projects</a></li>
+                    <li><a href="#major-project">12. Major Phase Project</a></li>
+                    <li><a href="#bookstore">13. Bookstore Case</a></li>
+                    <li><a href="#architecture">14. Architecture Mapping</a></li>
+                    <li><a href="#interview-questions">15. Interview Prep</a></li>
+                    <li><a href="#mistakes">16. Common Mistakes</a></li>
+                    <li><a href="#best-practices">17. Best Practices</a></li>
+                    <li><a href="#tools">18. Tools</a></li>
+                    <li><a href="#certifications">19. Certifications</a></li>
+                    <li><a href="#resources">20. Free Resources</a></li>
+                    <li><a href="#documentation">21. Documentation</a></li>
+                    <li><a href="#github">22. GitHub Roadmap</a></li>
+                    <li><a href="#resume">23. Resume Projects</a></li>
+                    <li><a href="#outcomes">24. Career Outcomes</a></li>
+                    <li><a href="#next-readiness">25. Next Phase Readiness</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content-area">
+            <div class="content-container">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span>Phase 1: Advanced Java Mastery</span>
+                </div>
+
+                <div class="animate-fade-in">
+                    <span class="badge badge-info">Intermediate Level</span>
+                    <h1 class="premium-title">Advanced Java Mastery</h1>
+                    <p class="phase-description">Dive deep into functional programming, concurrency, and advanced language features. Master the tools required for building high-performance, scalable enterprise backend systems.</p>
+                </div>
+                
+                <section id="overview">
+                    <h2 class="premium-title">1. Phase Overview</h2>
+                    <p>Transition from a Java programmer to a Java Engineer. This phase dives deep into the high-level features of the language that enable building production-grade, high-performance systems. We explore <strong>Functional Programming</strong>, <strong>Generics</strong>, <strong>Concurrency</strong>, and <strong>Modern Java Features (LTS 17/21)</strong>.</p>
+                </section>
+
+                <section id="why-matters">
+                    <h2 class="premium-title">2. Why This Phase Matters</h2>
+                    <div class="module-card">
+                        <p>Advanced Java is the bridge between writing simple scripts and building enterprise-grade backend engines. It enables:</p>
+                        <ul>
+                            <li><strong>Type Safety:</strong> Using Generics to prevent runtime ClassCastExceptions.</li>
+                            <li><strong>Performance:</strong> Leveraging Multi-threading to utilize multi-core processors.</li>
+                            <li><strong>Code Elegance:</strong> Using Lambdas and Streams to write declarative, readable code.</li>
+                            <li><strong>Maintainability:</strong> Using Design Patterns and modern features like Records for cleaner domain models.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="theoretical-roadmap">
+                    <h2 class="premium-title">3. Complete Theoretical Roadmap</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Concept</th>
+                                    <th>Internal Working</th>
+                                    <th>Enterprise Benefit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Generics</strong></td>
+                                    <td>Type Erasure & Bridge Methods</td>
+                                    <td>Reusable, type-safe components.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Stream API</strong></td>
+                                    <td>Lazy Evaluation & Spliterators</td>
+                                    <td>Parallel data processing and clean code.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Concurrency</strong></td>
+                                    <td>CAS (Compare-And-Swap) & Memory Barriers</td>
+                                    <td>High-throughput, responsive applications.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>JVM Memory</strong></td>
+                                    <td>G1/ZGC & Metaspace dynamics</td>
+                                    <td>Application stability and resource optimization.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="topic-breakdown">
+                    <h2 class="premium-title">4. Deep Topic Breakdown</h2>
+                    
+                    <div class="module-card">
+                        <h3>4.1 Generics Deep Dive</h3>
+                        <p>Understand how the Java compiler handles types at compile-time vs runtime.</p>
+                        <ul>
+                            <li><strong>Type Erasure:</strong> Why <code>List&lt;String&gt;</code> becomes <code>List&lt;Object&gt;</code> in bytecode.</li>
+                            <li><strong>Wildcards:</strong> PECS (Producer Extends, Consumer Super) principle.</li>
+                            <li><strong>Bounded Types:</strong> Restricting generics with <code>&lt;T extends Number&gt;</code>.</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-card">
+                        <h3>4.2 Concurrency & Multithreading</h3>
+                        <p>Moving beyond <code>Thread.start()</code> to the <code>java.util.concurrent</code> ecosystem.</p>
+                        <ul>
+                            <li><strong>Executor Framework:</strong> Thread pools (Fixed, Cached, Scheduled).</li>
+                            <li><strong>Atomic Variables:</strong> Lock-free programming with <code>AtomicInteger</code>.</li>
+                            <li><strong>Synchronizers:</strong> <code>CountDownLatch</code>, <code>CyclicBarrier</code>, and <code>Semaphore</code>.</li>
+                            <li><strong>Virtual Threads (Java 21):</strong> Lightweight threads for massive scalability.</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-card">
+                        <h3>4.3 Functional Programming in Java</h3>
+                        <p>Shifting from imperative to declarative style.</p>
+                        <ul>
+                            <li><strong>Functional Interfaces:</strong> <code>Predicate</code>, <code>Function</code>, <code>Consumer</code>, <code>Supplier</code>.</li>
+                            <li><strong>Method References:</strong> <code>ClassName::methodName</code> syntax.</li>
+                            <li><strong>Stream Operations:</strong> Intermediate (filter, map) vs Terminal (collect, forEach).</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="subtopic-curriculum">
+                    <h2 class="premium-title">5. Subtopic Curriculum</h2>
+                    <div class="objectives-grid">
+                        <div class="checklist-item">
+                            <input type="checkbox" disabled checked>
+                            <div>
+                                <strong>Advanced Collections:</strong> ConcurrentHashMap, PriorityQueue, and CopyOnWriteArrayList.
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" disabled checked>
+                            <div>
+                                <strong>Reflection & Annotations:</strong> Runtime introspection and custom annotation processing.
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" disabled checked>
+                            <div>
+                                <strong>IO & NIO:</strong> Non-blocking IO and File NIO.2 operations.
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" disabled checked>
+                            <div>
+                                <strong>Memory Management:</strong> Garbage Collection tuning and Heap analysis.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="progression">
+                    <h2 class="premium-title">6. Chronological Progression</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 1: Generics & Collections Mastery</h4>
+                                <p>Deep dive into custom generic classes and internal implementation of HashMaps.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 2: Functional Programming</h4>
+                                <p>Mastering the Stream API and writing custom Functional Interfaces.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 3: Concurrency & Multithreading</h4>
+                                <p>Building thread-safe applications and using the Executor Framework.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 4: Modern Java & JVM</h4>
+                                <p>Records, Sealed Classes, and JVM performance tuning.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="mastery-roadmap">
+                    <h2 class="premium-title">7. Weekly Mastery Roadmap</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Week 1:</strong> Can explain why <code>List&lt;Object&gt; obj = new ArrayList&lt;String&gt;()</code> fails.</li>
+                            <li><strong>Week 2:</strong> Can refactor a complex loop into a single Stream pipeline.</li>
+                            <li><strong>Week 3:</strong> Can identify and fix a deadlock scenario.</li>
+                            <li><strong>Week 4:</strong> Understands the difference between G1 and ZGC garbage collectors.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="practice-tasks">
+                    <h2 class="premium-title">8. Practice Tasks</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Build a <strong>Custom Generic Repository</strong> for any data type.</li>
+                            <li>Implement a <strong>Producer-Consumer</strong> pattern using <code>BlockingQueue</code>.</li>
+                            <li>Write a <strong>Parallel Stream</strong> benchmark for processing 1 million records.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="exercises">
+                    <h2 class="premium-title">9. Exercises</h2>
+                    <div class="module-card">
+                        <h4>Theoretical Challenges</h4>
+                        <ul>
+                            <li>Explain the 'Happens-Before' relationship in Java memory model.</li>
+                            <li>Why are Strings immutable in Java, and how does it relate to security?</li>
+                            <li>What is the difference between <code>submit()</code> and <code>execute()</code> in ExecutorService?</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="theory-checkpoints">
+                    <h2 class="premium-title">10. Theory Checkpoints</h2>
+                    <div class="warning-box">
+                        <strong>Mastery Check:</strong>
+                        <ul>
+                            <li>Can you explain Type Erasure in 3 sentences?</li>
+                            <li>Do you know when to use <code>volatile</code> vs <code>synchronized</code>?</li>
+                            <li>Can you describe the lifecycle of a Java Record?</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="mini-projects">
+                    <h2 class="premium-title">11. Mini Projects</h2>
+                    <div class="project-card">
+                        <h4>1. Multi-threaded Log Processor</h4>
+                        <p>A tool that reads massive log files concurrently and generates a summary report.</p>
+                    </div>
+                    <div class="project-card">
+                        <h4>2. Custom Dependency Injector</h4>
+                        <p>Use Reflection and Annotations to build a basic IoC container.</p>
+                    </div>
+                </section>
+
+                <section id="major-project">
+                    <h2 class="premium-title">12. Major Phase Project</h2>
+                    <div class="project-card" style="border-left: 4px solid var(--highlight);">
+                        <h3>High-Performance Inventory Engine</h3>
+                        <p>Build a core engine for the Bookstore that handles thousands of concurrent inventory updates with thread-safety and audit logging.</p>
+                        <ul>
+                            <li><strong>Features:</strong> Concurrent updates, Stream-based reporting, custom generic storage.</li>
+                            <li><strong>Tech:</strong> java.util.concurrent, Stream API, Generics.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="bookstore">
+                    <h2 class="premium-title">13. Enterprise Bookstore Case Study</h2>
+                    <div class="tip-box">
+                        <p><strong>Phase Implementation:</strong> Optimizing <strong>Search and Inventory</strong>.</p>
+                        <ul>
+                            <li><code>BookSearchEngine</code>: Uses Parallel Streams for lightning-fast book lookup.</li>
+                            <li><code>InventoryManager</code>: Uses <code>ReadWriteLock</code> to allow multiple readers but exclusive writers.</li>
+                            <li><code>AuditLogger</code>: Uses <code>ExecutorService</code> to log transactions asynchronously.</li>
+                        </ul>
+                        <p><em>Focus:</em> Ensuring the bookstore can scale to handle high traffic during peak sales.</p>
+                    </div>
+                </section>
+
+                <section id="architecture">
+                    <h2 class="premium-title">14. Architecture Mapping</h2>
+                    <div class="module-card">
+                        <p>Advanced Java concepts map to the <strong>Core Business Layer</strong>.</p>
+                        <ul>
+                            <li><strong>Concurrency:</strong> Essential for the Service Layer to handle multiple requests.</li>
+                            <li><strong>Generics:</strong> Crucial for the Data Access Layer (DAO/Repository) patterns.</li>
+                            <li><strong>Streams:</strong> Used in the Domain Layer for complex data transformations.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="interview-questions">
+                    <h2 class="premium-title">15. Interview Preparation</h2>
+                    <div class="interview-card">
+                        <span class="badge badge-info">Beginner</span>
+                        <strong>Q: What is the difference between a process and a thread?</strong>
+                        <p>A: A process is an independent execution unit with its own memory space, while a thread is a lightweight unit within a process that shares memory with other threads.</p>
+                    </div>
+                    <div class="interview-card">
+                        <span class="badge badge-warning">Intermediate</span>
+                        <strong>Q: How does a ConcurrentHashMap achieve thread-safety?</strong>
+                        <p>A: It uses a technique called 'Lock Stripping' or segment-level locking (in older versions) and CAS operations with volatile variables in modern versions to allow concurrent reads and limited concurrent writes.</p>
+                    </div>
+                    <div class="interview-card">
+                        <span class="badge badge-error">Advanced</span>
+                        <strong>Q: Explain the PECS principle in Generics.</strong>
+                        <p>A: Producer Extends, Consumer Super. Use <code>? extends T</code> when you want to get values out of a collection (Producer), and <code>? super T</code> when you want to put values into a collection (Consumer).</p>
+                    </div>
+                </section>
+
+                <section id="mistakes">
+                    <h2 class="premium-title">16. Common Mistakes</h2>
+                    <div class="warning-box">
+                        <ul>
+                            <li><strong>Swallowing InterruptedException:</strong> Always restore the interrupted status or rethrow it.</li>
+                            <li><strong>Using <code>synchronized</code> on everything:</strong> Leads to poor performance; use concurrent collections or locks instead.</li>
+                            <li><strong>Incorrect PECS usage:</strong> Leads to compile-time errors or unintended type safety issues.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="best-practices">
+                    <h2 class="premium-title">17. Best Practices</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Prefer <code>java.util.concurrent</code>:</strong> Use high-level utilities instead of <code>wait/notify</code>.</li>
+                            <li><strong>Favor Records:</strong> Use them for DTOs and simple data carriers for immutability and clarity.</li>
+                            <li><strong>Limit Parallel Streams:</strong> Only use them when processing massive datasets where CPU overhead is justified.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="tools">
+                    <h2 class="premium-title">18. Recommended Tools</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>JConsole / VisualVM:</strong> For monitoring thread usage and heap memory.</li>
+                            <li><strong>JMH (Java Microbenchmark Harness):</strong> For accurate performance measurements.</li>
+                            <li><strong>IntelliJ Debugger:</strong> Master thread-specific breakpoints.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="certifications">
+                    <h2 class="premium-title">19. Relevant Certifications</h2>
+                    <ul>
+                        <li>Oracle Certified Professional: Java SE 17/21 Developer.</li>
+                    </ul>
+                </section>
+
+                <section id="resources">
+                    <h2 class="premium-title">20. Free Resources</h2>
+                    <ul>
+                        <li><a href="https://docs.oracle.com/en/java/javase/21/docs/api/index.html">Official Java 21 API Documentation</a></li>
+                        <li><a href="https://java-design-patterns.com/">Java Design Patterns Encyclopedia</a></li>
+                    </ul>
+                </section>
+
+                <section id="documentation">
+                    <h2 class="premium-title">21. Essential Documentation</h2>
+                    <ul>
+                        <li><a href="https://docs.oracle.com/javase/tutorial/extra/generics/index.html">Oracle Generics Tutorial</a></li>
+                        <li><a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/">Java Concurrency Tutorial</a></li>
+                    </ul>
+                </section>
+
+                <section id="github">
+                    <h2 class="premium-title">22. GitHub Portfolio Roadmap</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Repository: <code>advanced-java-patterns</code> - Implementation of GoF patterns using modern Java.</li>
+                            <li>Repository: <code>concurrent-bookstore-engine</code> - The multi-threaded inventory system.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="resume">
+                    <h2 class="premium-title">23. How to Showcase on Resume</h2>
+                    <div class="tip-box">
+                        <p><strong>Bullet Point:</strong> "Optimized data processing pipelines using Java Streams and Parallel processing, reducing execution time by 40% for datasets exceeding 1M records."</p>
+                    </div>
+                </section>
+
+                <section id="outcomes">
+                    <h2 class="premium-title">24. Career Outcomes</h2>
+                    <ul>
+                        <li>Senior Java Developer.</li>
+                        <li>Backend Performance Engineer.</li>
+                        <li>Systems Architect.</li>
+                    </ul>
+                </section>
+
+                <section id="next-readiness">
+                    <h2 class="premium-title">25. Next Phase Readiness Checklist</h2>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled checked>
+                        <span>I can explain the difference between a fixed and cached thread pool.</span>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled checked>
+                        <span>I understand PECS and can apply it to generic APIs.</span>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled checked>
+                        <span>I can write thread-safe code without over-synchronization.</span>
+                    </div>
+                    <div class="checklist-item" style="margin-top: 2rem;">
+                        <a href="phase2-database.html" class="btn-premium">Proceed to Phase 2: Database &rarr;</a>
+                    </div>
+                </section>
+
+                <div class="warning-box">
+                    <strong>Avoid This:</strong> Never use <code>ParallelStream</code> for tasks involving shared state or blocking I/O without careful benchmarking. It can often be slower than sequential streams due to thread management overhead.
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="premium-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>JavaAcademy</h2>
+                <p>Building the next generation of Enterprise Architects.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Back to Roadmap</a></li>
+                    <li><a href="phase2-database.html">Next: Phase 2</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: #94a3b8; font-size: 0.85rem;">
+            &copy; 2026 Java Enterprise Academy. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>

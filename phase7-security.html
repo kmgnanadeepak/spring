@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 7: Enterprise Security | Java Enterprise Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="docs-page">
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                Java<span>Academy</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resources.html">Resources</a>
+                <a href="projects.html">Projects</a>
+                <a href="interview.html">Interview</a>
+                <a href="career.html">Career</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="docs-layout">
+        <aside class="sidebar">
+            <div class="sidebar-title">Phase 7 Navigation</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#overview" class="active">1. Phase Overview</a></li>
+                    <li><a href="#why-matters">2. Why This Phase Matters</a></li>
+                    <li><a href="#theoretical-roadmap">3. Theoretical Roadmap</a></li>
+                    <li><a href="#topic-breakdown">4. Topic Breakdown</a></li>
+                    <li><a href="#subtopic-curriculum">5. Subtopic Curriculum</a></li>
+                    <li><a href="#progression">6. Chronological Progression</a></li>
+                    <li><a href="#mastery-roadmap">7. Weekly Mastery</a></li>
+                    <li><a href="#practice-tasks">8. Practice Tasks</a></li>
+                    <li><a href="#exercises">9. Exercises</a></li>
+                    <li><a href="#theory-checkpoints">10. Theory Checkpoints</a></li>
+                    <li><a href="#mini-projects">11. Mini Projects</a></li>
+                    <li><a href="#major-project">12. Major Phase Project</a></li>
+                    <li><a href="#bookstore">13. Bookstore Case</a></li>
+                    <li><a href="#architecture">14. Architecture Mapping</a></li>
+                    <li><a href="#interview-questions">15. Interview Prep</a></li>
+                    <li><a href="#mistakes">16. Common Mistakes</a></li>
+                    <li><a href="#best-practices">17. Best Practices</a></li>
+                    <li><a href="#tools">18. Tools</a></li>
+                    <li><a href="#certifications">19. Certifications</a></li>
+                    <li><a href="#resources">20. Free Resources</a></li>
+                    <li><a href="#documentation">21. Documentation</a></li>
+                    <li><a href="#github">22. GitHub Roadmap</a></li>
+                    <li><a href="#resume">23. Resume Projects</a></li>
+                    <li><a href="#outcomes">24. Career Outcomes</a></li>
+                    <li><a href="#next-readiness">25. Next Phase Readiness</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content-area">
+            <div class="content-container">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span>Phase 7: Enterprise Security</span>
+                </div>
+
+                <div class="animate-fade-in">
+                    <span class="badge badge-warning">Advanced Level</span>
+                    <h1 class="premium-title">Enterprise Security</h1>
+                    <p class="phase-description">Security is non-negotiable. Learn how to protect your enterprise applications using the powerful Spring Security framework, JWT, and OAuth2.</p>
+                </div>
+                
+                <section id="overview">
+                    <h2 class="premium-title">1. Phase Overview</h2>
+                    <p>Security is not a feature; it's a foundation. In this phase, you'll dive deep into <strong>Spring Security</strong>, the industry standard for securing Spring-based applications. You'll move beyond basic login forms to master <strong>Stateless Authentication</strong>, <strong>JWT (JSON Web Tokens)</strong>, <strong>OAuth2</strong>, and the complex architecture of the <strong>Security Filter Chain</strong>.</p>
+                </section>
+
+                <section id="why-matters">
+                    <h2 class="premium-title">2. Why This Phase Matters</h2>
+                    <div class="tip-box">
+                        <p>In an era of constant data breaches, enterprise-grade security is non-negotiable. Mastering this phase allows you to protect user data, manage granular access control, and prevent common attacks like CSRF, CORS, and SQL Injection. It is the gatekeeper of your enterprise application.</p>
+                    </div>
+                </section>
+
+                <section id="theoretical-roadmap">
+                    <h2 class="premium-title">3. Complete Theoretical Roadmap</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Concept</th>
+                                    <th>Internal Working</th>
+                                    <th>Enterprise Benefit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Authentication</strong></td>
+                                    <td>AuthenticationManager & Providers</td>
+                                    <td>Verifies "who" the user is with high pluggability.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Authorization</strong></td>
+                                    <td>AccessDecisionManager & Voters</td>
+                                    <td>Determines "what" the user can do (RBAC/ABAC).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Filter Chain</strong></td>
+                                    <td>DelegatingFilterProxy & Chain</td>
+                                    <td>Intercepts requests before they reach the controller.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>JWT</strong></td>
+                                    <td>Signed JSON payloads (Header.Payload.Sig)</td>
+                                    <td>Enables stateless, scalable sessions for distributed systems.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="topic-breakdown">
+                    <h2 class="premium-title">4. Deep Topic-by-Topic Breakdown</h2>
+                    <div class="module-card">
+                        <h3>I. Spring Security Filter Architecture</h3>
+                        <p>The internal mechanics of how Spring intercepts every web request.</p>
+                        <ul>
+                            <li><strong>DelegatingFilterProxy:</strong> The bridge between the Servlet container and Spring's ApplicationContext.</li>
+                            <li><strong>FilterChainProxy:</strong> The entry point to the Security Filter Chain, managing multiple chain configurations.</li>
+                            <li><strong>SecurityContextPersistenceFilter:</strong> How Spring loads and stores the <code>SecurityContext</code> between requests using <code>HttpSession</code> or Tokens.</li>
+                        </ul>
+                    </div>
+                    <div class="module-card">
+                        <h3>II. Authentication Internal Workflow</h3>
+                        <p>Understanding the handshake between providers and managers.</p>
+                        <ul>
+                            <li><strong>AuthenticationManager:</strong> The coordinator that delegates to one or more <code>AuthenticationProvider</code> instances.</li>
+                            <li><strong>DaoAuthenticationProvider:</strong> The standard implementation for loading users via <code>UserDetailsService</code> and verifying passwords with <code>PasswordEncoder</code>.</li>
+                            <li><strong>SecurityContextHolder:</strong> Thread-local storage for the current user's identity and authorities.</li>
+                        </ul>
+                    </div>
+                    <div class="module-card">
+                        <h3>III. Stateless Security with JWT</h3>
+                        <p>Moving beyond sessions to modern, scalable authentication.</p>
+                        <ul>
+                            <li><strong>JWT Anatomy:</strong> Header (Algorithm), Payload (Claims/Data), and Signature (Integrity).</li>
+                            <li><strong>Secret vs. Public Keys:</strong> Symmetric (HS256) vs. Asymmetric (RS256) signing strategies.</li>
+                            <li><strong>Token Lifecycle:</strong> Managing expiration, refresh tokens, and blacklisting (using Redis).</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="subtopic-curriculum">
+                    <h2 class="premium-title">5. Subtopic Curriculum</h2>
+                    <div class="module-card">
+                        <h4>Unit 1: Security Fundamentals</h4>
+                        <ul>
+                            <li>Authentication vs. Authorization.</li>
+                            <li>Password Hashing with BCrypt.</li>
+                            <li>Secure defaults and the Principle of Least Privilege.</li>
+                        </ul>
+                        <h4>Unit 2: Stateless Security with JWT</h4>
+                        <ul>
+                            <li>Token generation and validation.</li>
+                            <li>Refresh token rotation strategies.</li>
+                            <li>Integrating JWT with Spring Security filters.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="progression">
+                    <h2 class="premium-title">6. Learning Progression</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Foundation</h4>
+                                <p>Set up basic authentication and explore the Security Filter Chain.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Intermediate</h4>
+                                <p>Implement JWT-based stateless authentication and RBAC.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Advanced</h4>
+                                <p>Integrate OAuth2/OIDC and implement advanced method-level security.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="mastery-roadmap">
+                    <h2 class="premium-title">7. Mastery Roadmap</h2>
+                    <div class="module-card">
+                        <p>To master security, you must understand the "why" behind every configuration. You should be able to explain the entire flow of a request through the security filters and how to customize them for complex business requirements.</p>
+                    </div>
+                </section>
+
+                <section id="practice-tasks">
+                    <h2 class="premium-title">8. Essential Practice Tasks</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Build a custom <code>UserDetailsService</code> that loads users from a database.</li>
+                            <li>Implement a <code>OncePerRequestFilter</code> for JWT validation.</li>
+                            <li>Configure CORS to allow only specific origins for your API.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="exercises">
+                    <h2 class="premium-title">9. Hands-on Exercises</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Secure specific API endpoints using <code>@PreAuthorize</code>.</li>
+                            <li>Implement a password reset flow with secure token expiration.</li>
+                            <li>Set up a social login using Google or GitHub.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="checkpoints">
+                    <h2 class="premium-title">10. Theory Checkpoints</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>How does Spring Security handle session management?</li>
+                            <li>What is the role of the <code>SecurityContextHolder</code>?</li>
+                            <li>Explain the difference between <code>hasRole()</code> and <code>hasAuthority()</code>.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="mini-projects">
+                    <h2 class="premium-title">11. Phase Mini-Projects</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>API Key Manager:</strong> Build a service that issues and validates API keys for third-party integrations.</li>
+                            <li><strong>Secure File Vault:</strong> An application where users can upload files accessible only to authorized users.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="major-project">
+                    <h2 class="premium-title">12. Major Phase Project</h2>
+                    <div class="project-card">
+                        <h3>Enterprise Auth Service</h3>
+                        <p>A centralized authentication server for the Bookstore ecosystem. Features include JWT issuance, Refresh token rotation, Social Login, and Password reset flow.</p>
+                        <div class="tag">Spring Security</div>
+                        <div class="tag">JWT</div>
+                        <div class="tag">OAuth2</div>
+                        <div class="tag">Redis</div>
+                    </div>
+                </section>
+
+                <section id="bookstore">
+                    <h2 class="premium-title">13. Bookstore Case Study</h2>
+                    <div class="tip-box">
+                        <p><strong>Master Project Integration:</strong> Securing the <strong>Ordering and Inventory</strong> systems.</p>
+                        <ul>
+                            <li><code>Customer</code>: Role with access to browse and buy books.</li>
+                            <li><code>Admin</code>: Role with access to add/remove inventory.</li>
+                            <li><code>OrderSecurity</code>: Custom expression handler to ensure users only see their own orders.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="architecture">
+                    <h2 class="premium-title">14. Architecture Mapping</h2>
+                    <div class="module-card">
+                        <p>Visualize how security acts as the <strong>Perimeter Layer</strong> of your architecture, protecting internal services from unauthorized access while providing a seamless user experience.</p>
+                    </div>
+                </section>
+
+                <section id="interview-prep">
+                    <h2 class="premium-title">15. Interview Preparation (3 Levels)</h2>
+                    <div class="interview-card">
+                        <span class="badge badge-info">Beginner</span>
+                        <strong>Q: What is the difference between Authentication and Authorization?</strong>
+                        <p>A: Authentication is the process of verifying *who* a user is (identity), while Authorization is the process of verifying *what* an authenticated user is allowed to do (permissions/roles).</p>
+                    </div>
+                    <div class="interview-card">
+                        <span class="badge badge-warning">Intermediate</span>
+                        <strong>Q: How does the Spring Security Filter Chain work?</strong>
+                        <p>A: It's a sequence of filters that intercept incoming requests. Each filter has a specific responsibility (e.g., extracting credentials, checking sessions, handling CSRF). The <code>DelegatingFilterProxy</code> bridges the Servlet container and the Spring <code>SecurityFilterChain</code> bean.</p>
+                    </div>
+                    <div class="interview-card">
+                        <span class="badge badge-error">Advanced</span>
+                        <strong>Q: Explain the OAuth2 Authorization Code Grant flow and its security advantages.</strong>
+                        <p>A: In this flow, the client application never sees the user's credentials. Instead, the user authenticates with the Authorization Server, which provides an Authorization Code to the client via a redirect. The client then exchanges this code for an Access Token. This prevents the client from handling sensitive passwords and allows for centralized session management and easy revocation.</p>
+                    </div>
+                </section>
+
+                <section id="mistakes">
+                    <h2 class="premium-title">16. Common Mistakes</h2>
+                    <div class="warning-box">
+                        <strong>Exposing JWTs:</strong> Never store JWTs in <code>localStorage</code> if possible; use <code>HttpOnly</code> cookies to prevent XSS attacks.
+                    </div>
+                </section>
+
+                <section id="best-practices">
+                    <h2 class="premium-title">17. Best Practices</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Always use BCrypt or Argon2 for password hashing.</li>
+                            <li>Implement CSRF protection for stateful applications.</li>
+                            <li>Rotate refresh tokens to mitigate the risk of token theft.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="tools">
+                    <h2 class="premium-title">18. Tools & Stack</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Framework:</strong> Spring Security 6.x</li>
+                            <li><strong>Tokens:</strong> JJWT or Nimbus JOSE + JWT</li>
+                            <li><strong>OAuth2:</strong> Spring Security OAuth2 Client/Jose</li>
+                            <li><strong>Testing:</strong> Spring Security Test</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="certifications">
+                    <h2 class="premium-title">19. Recommended Certifications</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Certified Ethical Hacker (CEH)</li>
+                            <li>CompTIA Security+</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="resources">
+                    <h2 class="premium-title">20. Free Resources</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Spring Security Official Reference</li>
+                            <li>OWASP Top 10 Guide</li>
+                            <li>JWT.io for Token Debugging</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="documentation">
+                    <h2 class="premium-title">21. Official Documentation</h2>
+                    <div class="module-card">
+                        <p>Reference the official Spring Security documentation for advanced configuration and integration with OAuth2 and OIDC.</p>
+                    </div>
+                </section>
+
+                <section id="github-roadmap">
+                    <h2 class="premium-title">22. GitHub Roadmap</h2>
+                    <div class="module-card">
+                        <p>Showcase your security knowledge by implementing a full authentication and authorization flow in your public repositories. Focus on clean security configurations.</p>
+                    </div>
+                </section>
+
+                <section id="resume-projects">
+                    <h2 class="premium-title">23. Resume Projects</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Stateless Auth Engine:</strong> A reusable JWT-based security module for Spring Boot applications.</li>
+                            <li><strong>OAuth2 Social Integrator:</strong> A multi-provider social login system.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="outcomes">
+                    <h2 class="premium-title">24. Career Outcomes</h2>
+                    <div class="module-card">
+                        <p>Qualify for Security Engineer, Backend Architect, and Senior Java Developer roles where security is a top priority.</p>
+                    </div>
+                </section>
+
+                <section id="next-readiness">
+                    <h2 class="premium-title">25. Next Phase Readiness</h2>
+                    <div class="module-card">
+                        <p>You are ready for <strong>Phase 8: Microservices</strong> once you can secure a standalone Spring Boot application and understand stateless authentication principles.</p>
+                    </div>
+                </section>
+
+                <section id="mistakes">
+                    <h2 class="premium-title">16. Common Mistakes</h2>
+                    <div class="warning-box">
+                        <ul>
+                            <li><strong>Storing JWTs in LocalStorage:</strong> Makes the application vulnerable to XSS; use HttpOnly cookies instead.</li>
+                            <li><strong>Disabling CSRF globally:</strong> Only disable it for stateless APIs; keep it on for stateful web apps.</li>
+                            <li><strong>Not validating Token Expiration:</strong> Accepting tokens that should have expired, leading to security holes.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="best-practices">
+                    <h2 class="premium-title">17. Best Practices</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Principle of Least Privilege:</strong> Only grant the minimum roles required for a task.</li>
+                            <li><strong>Rotate Secrets:</strong> Change JWT signing keys and DB passwords regularly.</li>
+                            <li><strong>Secure the Actuator:</strong> Never expose management endpoints to the public internet without auth.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="tools">
+                    <h2 class="premium-title">18. Recommended Tools</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>jwt.io:</strong> For debugging and inspecting JWT payloads.</li>
+                            <li><strong>OWASP ZAP:</strong> For automated security scanning.</li>
+                            <li><strong>Keycloak:</strong> For an open-source Identity and Access Management solution.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="certifications">
+                    <h2 class="premium-title">19. Relevant Certifications</h2>
+                    <ul>
+                        <li>Spring Professional Developer (Focus on Security section).</li>
+                        <li>CompTIA Security+ (General security principles).</li>
+                    </ul>
+                </section>
+
+                <section id="resources">
+                    <h2 class="premium-title">20. Free Resources</h2>
+                    <ul>
+                        <li><a href="https://spring.io/projects/spring-security">Official Spring Security Documentation</a></li>
+                        <li><a href="https://www.baeldung.com/spring-security-series">Baeldung - Spring Security Series</a></li>
+                    </ul>
+                </section>
+
+                <section id="documentation">
+                    <h2 class="premium-title">21. Essential Documentation</h2>
+                    <ul>
+                        <li><a href="https://docs.spring.io/spring-security/reference/index.html">Spring Security Reference</a></li>
+                    </ul>
+                </section>
+
+                <section id="github">
+                    <h2 class="premium-title">22. GitHub Portfolio Roadmap</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Repository: <code>spring-security-jwt-starter</code> - A clean template for JWT auth.</li>
+                            <li>Repository: <code>oauth2-social-login-demo</code> - Showing Google/GitHub integration.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="resume">
+                    <h2 class="premium-title">23. How to Showcase on Resume</h2>
+                    <div class="tip-box">
+                        <p><strong>Bullet Point:</strong> "Architected a stateless authentication system using Spring Security and JWT, implementing role-based access control and secure password hashing with BCrypt for over 10,000 enterprise users."</p>
+                    </div>
+                </section>
+
+                <section id="outcomes">
+                    <h2 class="premium-title">24. Career Outcomes</h2>
+                    <ul>
+                        <li>Security Engineer.</li>
+                        <li>Backend Architect.</li>
+                        <li>Senior Java Developer.</li>
+                    </ul>
+                </section>
+
+                <section id="next-readiness">
+                    <h2 class="premium-title">25. Next Phase Readiness Checklist</h2>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled checked>
+                        <span>I understand the difference between Authentication and Authorization.</span>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled checked>
+                        <span>I can implement a custom JWT-based authentication flow.</span>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled checked>
+                        <span>I know how to secure methods using @PreAuthorize.</span>
+                    </div>
+                    <div class="checklist-item" style="margin-top: 2rem;">
+                        <a href="phase8-microservices.html" class="btn-premium">Proceed to Phase 8: Microservices &rarr;</a>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer class="premium-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>JavaAcademy</h2>
+                <p>Building the next generation of Enterprise Architects.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Back to Roadmap</a></li>
+                    <li><a href="phase8-microservices.html">Next: Phase 8</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: #94a3b8; font-size: 0.85rem;">
+            &copy; 2026 Java Enterprise Academy. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>

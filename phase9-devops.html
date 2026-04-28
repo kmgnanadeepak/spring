@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 9: DevOps & Cloud | Java Enterprise Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="docs-page">
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                Java<span>Academy</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resources.html">Resources</a>
+                <a href="projects.html">Projects</a>
+                <a href="interview.html">Interview</a>
+                <a href="career.html">Career</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="docs-layout">
+        <aside class="sidebar">
+            <div class="sidebar-title">Phase 9 Navigation</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#overview" class="active">1. Overview</a></li>
+                    <li><a href="#why-matters">2. Why It Matters</a></li>
+                    <li><a href="#theoretical-roadmap">3. Theoretical Roadmap</a></li>
+                    <li><a href="#topic-breakdown">4. Topic Breakdown</a></li>
+                    <li><a href="#curriculum">5. Subtopic Curriculum</a></li>
+                    <li><a href="#progression">6. Progression</a></li>
+                    <li><a href="#mastery-roadmap">7. Mastery Roadmap</a></li>
+                    <li><a href="#practice-tasks">8. Practice Tasks</a></li>
+                    <li><a href="#exercises">9. Exercises</a></li>
+                    <li><a href="#checkpoints">10. Theory Checkpoints</a></li>
+                    <li><a href="#mini-projects">11. Mini Projects</a></li>
+                    <li><a href="#major-project">12. Major Project</a></li>
+                    <li><a href="#bookstore">13. Bookstore Case Study</a></li>
+                    <li><a href="#architecture">14. Architecture Mapping</a></li>
+                    <li><a href="#interview-prep">15. Interview Prep</a></li>
+                    <li><a href="#mistakes">16. Common Mistakes</a></li>
+                    <li><a href="#best-practices">17. Best Practices</a></li>
+                    <li><a href="#tools">18. Tools & Stack</a></li>
+                    <li><a href="#certifications">19. Certifications</a></li>
+                    <li><a href="#resources">20. Free Resources</a></li>
+                    <li><a href="#documentation">21. Documentation</a></li>
+                    <li><a href="#github-roadmap">22. GitHub Roadmap</a></li>
+                    <li><a href="#resume-projects">23. Resume Projects</a></li>
+                    <li><a href="#outcomes">24. Career Outcomes</a></li>
+                    <li><a href="#next-readiness">25. Next Phase Readiness</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content-area">
+            <div class="content-container">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span>Phase 9: DevOps & Cloud Deployment</span>
+                </div>
+
+                <div class="animate-fade-in">
+                    <span class="badge badge-warning">Advanced Level</span>
+                    <h1 class="premium-title">DevOps & Cloud Deployment</h1>
+                    <p class="phase-description">Code is only valuable if it's running. Learn how to containerize, automate, and deploy your Java applications to the cloud using industry-standard tools.</p>
+                </div>
+                
+                <section id="overview">
+                    <h2 class="premium-title">1. Phase Overview</h2>
+                    <p>The bridge between development and operations. In this phase, you'll master the art of delivering software at scale. You'll move beyond writing code to managing the entire lifecycle of an application. We'll cover everything from <strong>Containerization</strong> with Docker to <strong>Orchestration</strong> with Kubernetes, and <strong>Automation</strong> with CI/CD pipelines. This is where your Java applications become production-ready enterprise systems.</p>
+                </section>
+
+                <section id="why-matters">
+                    <h2 class="premium-title">2. Why This Phase Matters</h2>
+                    <div class="tip-box">
+                        <p>In the modern enterprise, "it works on my machine" is a failure. DevOps ensures that code is reliable, scalable, and deployable across any environment. High-performing organizations deploy 200x more frequently and recover 24x faster. Mastering these tools makes you indispensable in any high-scale engineering team.</p>
+                    </div>
+                </section>
+
+                <section id="theoretical-roadmap">
+                    <h2 class="premium-title">3. Complete Theoretical Roadmap</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Concept</th>
+                                    <th>Internal Working</th>
+                                    <th>Enterprise Benefit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Containerization</strong></td>
+                                    <td>Linux Namespaces & Cgroups</td>
+                                    <td>Immutable environments across Dev/QA/Prod.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Orchestration</strong></td>
+                                    <td>Kubernetes Control Plane (etcd, Scheduler)</td>
+                                    <td>Self-healing, auto-scaling, and bin-packing.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>CI/CD</strong></td>
+                                    <td>Automated pipelines (GitHub Actions/Jenkins)</td>
+                                    <td>Continuous feedback and rapid time-to-market.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Infrastructure as Code</strong></td>
+                                    <td>Declarative state (Terraform/Ansible)</td>
+                                    <td>Repeatable and version-controlled infrastructure.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="topic-breakdown">
+                    <h2 class="premium-title">4. Core Topic Breakdown</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Docker Foundations:</strong> Layers, Images vs Containers, Multi-stage builds.</li>
+                            <li><strong>CI/CD Pipelines:</strong> Build, Test, Scan, and Deploy automation.</li>
+                            <li><strong>Kubernetes Architecture:</strong> Nodes, Pods, Deployments, Services, and Ingress.</li>
+                            <li><strong>Cloud Platforms:</strong> Deploying to AWS (EKS), Azure (AKS), or Google Cloud (GKE).</li>
+                            <li><strong>Monitoring & Observability:</strong> Prometheus, Grafana, and ELK Stack.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="curriculum">
+                    <h2 class="premium-title">5. Subtopic Curriculum</h2>
+                    <div class="module-card">
+                        <h4>Unit 1: Advanced Containerization</h4>
+                        <ul>
+                            <li>Writing production-grade Dockerfiles (Non-root users, .dockerignore).</li>
+                            <li>Optimizing image size with Multi-stage builds and Distroless images.</li>
+                            <li>Local orchestration with Docker Compose for microservices.</li>
+                        </ul>
+                        <h4>Unit 2: Automated Delivery (CI/CD)</h4>
+                        <ul>
+                            <li>GitHub Actions: Workflows, Jobs, Steps, and Secrets management.</li>
+                            <li>Automated testing in pipelines (Unit, Integration, Security scans).</li>
+                            <li>Continuous Deployment vs Continuous Delivery.</li>
+                        </ul>
+                        <h4>Unit 3: Kubernetes Orchestration</h4>
+                        <ul>
+                            <li>K8s Objects: ReplicaSets, Deployments, and StatefulSets.</li>
+                            <li>Networking: ClusterIP, NodePort, and LoadBalancer services.</li>
+                            <li>Configuration: ConfigMaps and Secrets management.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="progression">
+                    <h2 class="premium-title">6. Chronological Progression</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 1: Container Mastery</h4>
+                                <p>Deep dive into Docker internals, building efficient images, and multi-service local setups.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 2: Pipeline Engineering</h4>
+                                <p>Building full CI/CD pipelines that build, test, and push images to a registry.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 3: Kubernetes Deep Dive</h4>
+                                <p>Learning the K8s control plane and deploying multi-service applications with high availability.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 4: Cloud Operations</h4>
+                                <p>Deploying to a managed K8s cluster (EKS/AKS) and setting up monitoring and logging.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="mastery-roadmap">
+                    <h2 class="premium-title">7. Weekly Mastery Roadmap</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Week 1 Goal:</strong> Containerize a complex Spring Boot app with a database.</li>
+                            <li><strong>Week 2 Goal:</strong> Achieve 100% automated build-to-registry pipeline.</li>
+                            <li><strong>Week 3 Goal:</strong> Deploy a self-healing application to a local K8s cluster.</li>
+                            <li><strong>Week 4 Goal:</strong> Perform a zero-downtime rolling update on a cloud cluster.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="practice-tasks">
+                    <h2 class="premium-title">8. Practice Tasks</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Create a Dockerfile that reduces image size by 70% using multi-stage builds.</li>
+                            <li>Configure a GitHub Action to run SonarQube analysis on every pull request.</li>
+                            <li>Write a K8s Deployment YAML with liveness and readiness probes.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="exercises">
+                    <h2 class="premium-title">9. Theoretical Exercises</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Compare and contrast Virtual Machines vs Containers in terms of isolation and performance.</li>
+                            <li>Draw the Kubernetes architecture, explaining the role of the Kubelet and API Server.</li>
+                            <li>Explain the '12-Factor App' principles and how they relate to cloud-native development.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="checkpoints">
+                    <h2 class="premium-title">10. Theory Checkpoints</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Can you explain why we use non-root users in Docker containers?</li>
+                            <li>Do you understand the difference between a ClusterIP and a NodePort service in K8s?</li>
+                            <li>How does a Rolling Update strategy work in Kubernetes?</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="mini-projects">
+                    <h2 class="premium-title">11. Mini Projects</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Auto-Scaling Service:</strong> A Spring Boot app that scales based on CPU usage in K8s.</li>
+                            <li><strong>Secure Pipeline:</strong> A CI/CD pipeline that fails if vulnerabilities are found in dependencies.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="major-project">
+                    <h2 class="premium-title">12. Major Phase Project</h2>
+                    <div class="project-card">
+                        <h3>Cloud-Native Deployment Suite</h3>
+                        <p>Build a production-ready infrastructure for a multi-service application. Includes Dockerization, a GitHub Actions pipeline, and deployment to a Kubernetes cluster with Prometheus monitoring.</p>
+                        <div class="tag">Docker</div>
+                        <div class="tag">K8s</div>
+                        <div class="tag">GitHub Actions</div>
+                        <div class="tag">Prometheus</div>
+                    </div>
+                </section>
+
+                <section id="bookstore">
+                    <h2 class="premium-title">13. Bookstore Case Study</h2>
+                    <div class="tip-box">
+                        <p><strong>Enterprise Bookstore Implementation:</strong> Global Deployment Strategy.</p>
+                        <ul>
+                            <li><strong>Containerization:</strong> Packaging <code>Catalog</code>, <code>Order</code>, and <code>Auth</code> services into optimized Docker images.</li>
+                            <li><strong>Orchestration:</strong> Deploying the ecosystem to <strong>AWS EKS</strong> with auto-scaling to handle peak book sale traffic.</li>
+                            <li><strong>Automation:</strong> Implementing <strong>Canary Deployments</strong> for the <code>Order-Service</code> to minimize risk.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="architecture">
+                    <h2 class="premium-title">14. Architecture Mapping</h2>
+                    <div class="module-card">
+                        <p>Map your <strong>Hexagonal Architecture</strong> to a <strong>Cloud-Native Deployment</strong>. Understand how Infrastructure as Code (IaC) defines the environment where your business logic lives.</p>
+                    </div>
+                </section>
+
+                <section id="interview-prep">
+                    <h2 class="premium-title">15. Interview Preparation</h2>
+                    <div class="interview-card">
+                        <strong>Beginner: What is the difference between an image and a container?</strong>
+                        <p>An image is a static blueprint; a container is a running instance of that blueprint with its own isolated filesystem and processes.</p>
+                    </div>
+                    <div class="interview-card">
+                        <strong>Intermediate: Explain the Kubernetes 'Control Plane' components.</strong>
+                        <p>Includes the API Server (entry point), etcd (state store), Scheduler (places pods), and Controller Manager (handles state transitions).</p>
+                    </div>
+                    <div class="interview-card">
+                        <strong>Advanced: How would you implement a zero-downtime deployment for a stateful application?</strong>
+                        <p>Discuss Blue-Green vs Rolling updates, database migration strategies (Flyway/Liquibase), and session management (Redis).</p>
+                    </div>
+                </section>
+
+                <section id="mistakes">
+                    <h2 class="premium-title">16. Common Mistakes</h2>
+                    <div class="warning-box">
+                        <strong>Hardcoded Configs:</strong> Never bake environment-specific configurations into Docker images. Use K8s ConfigMaps or Spring Cloud Config instead.
+                    </div>
+                    <div class="warning-box">
+                        <strong>Large Images:</strong> Using full JDK images in production increases the attack surface. Always use slim JRE or Distroless images.
+                    </div>
+                </section>
+
+                <section id="best-practices">
+                    <h2 class="premium-title">17. Best Practices</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Immutable Infrastructure:</strong> Never patch a running server; redeploy a new container instead.</li>
+                            <li><strong>Health Checks:</strong> Always implement Liveness and Readiness probes for every service.</li>
+                            <li><strong>Least Privilege:</strong> Run containers with non-root users and restricted file permissions.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="tools">
+                    <h2 class="premium-title">18. Tools & Stack</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Container:</strong> Docker, Podman.</li>
+                            <li><strong>Orchestration:</strong> Kubernetes, Helm.</li>
+                            <li><strong>CI/CD:</strong> GitHub Actions, Jenkins, ArgoCD.</li>
+                            <li><strong>Observability:</strong> Prometheus, Grafana, Loki.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="certifications">
+                    <h2 class="premium-title">19. Recommended Certifications</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Certified Kubernetes Application Developer (CKAD)</li>
+                            <li>AWS Certified Developer – Associate</li>
+                            <li>HashiCorp Certified: Terraform Associate</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="resources">
+                    <h2 class="premium-title">20. Free Resources</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><a href="https://labs.play-with-k8s.com/">Play with Kubernetes</a> - Browser-based K8s playground.</li>
+                            <li><a href="https://docker-curriculum.com/">Docker Curriculum</a> - Comprehensive guide for beginners.</li>
+                            <li><a href="https://github.com/features/actions">GitHub Actions Docs</a> - Official workflow guides.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="documentation">
+                    <h2 class="premium-title">21. Official Documentation</h2>
+                    <div class="module-card">
+                        <p>Read the <strong>Kubernetes Documentation</strong> on 'Workloads' and the <strong>Docker Documentation</strong> on 'Best Practices for Writing Dockerfiles'.</p>
+                    </div>
+                </section>
+
+                <section id="github-roadmap">
+                    <h2 class="premium-title">22. GitHub Roadmap</h2>
+                    <div class="module-card">
+                        <p>Your portfolio should now include a repository containing: Dockerfiles, Docker Compose files, K8s Manifests (YAML), and GitHub Action workflow files.</p>
+                    </div>
+                </section>
+
+                <section id="resume-projects">
+                    <h2 class="premium-title">23. Resume Projects</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Automated Cloud Migration:</strong> Containerized a monolithic Java app and migrated it to AWS EKS with 100% uptime.</li>
+                            <li><strong>Zero-Trust CI/CD:</strong> Built a pipeline that automates security scanning and vulnerability patching for Docker images.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="outcomes">
+                    <h2 class="premium-title">24. Career Outcomes</h2>
+                    <div class="module-card">
+                        <p>Qualify for <strong>DevOps Engineer</strong>, <strong>Site Reliability Engineer (SRE)</strong>, and <strong>Cloud-Native Developer</strong> roles at global tech firms.</p>
+                    </div>
+                </section>
+
+                <section id="next-readiness">
+                    <h2 class="premium-title">25. Next Phase Readiness</h2>
+                    <div class="module-card">
+                        <p>You are ready for <strong>Phase 10: Enterprise Architecture</strong> once you can deploy a multi-service application to a cluster with automated pipelines and monitoring.</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer class="premium-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>JavaAcademy</h2>
+                <p>Building the next generation of Enterprise Architects.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Back to Roadmap</a></li>
+                    <li><a href="phase10-enterprise-architecture.html">Next: Phase 10</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: #94a3b8; font-size: 0.85rem;">
+            &copy; 2026 Java Enterprise Academy. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 4: Spring MVC | Java Enterprise Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="docs-page">
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                Java<span>Academy</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resources.html">Resources</a>
+                <a href="projects.html">Projects</a>
+                <a href="interview.html">Interview</a>
+                <a href="career.html">Career</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="docs-layout">
+        <aside class="sidebar">
+            <div class="sidebar-title">Phase 4 Navigation</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#overview" class="active">1. Overview</a></li>
+                    <li><a href="#why-matters">2. Why It Matters</a></li>
+                    <li><a href="#theoretical-roadmap">3. Theoretical Roadmap</a></li>
+                    <li><a href="#topic-breakdown">4. Topic Breakdown</a></li>
+                    <li><a href="#curriculum">5. Subtopic Curriculum</a></li>
+                    <li><a href="#progression">6. Progression</a></li>
+                    <li><a href="#mastery-roadmap">7. Mastery Roadmap</a></li>
+                    <li><a href="#practice-tasks">8. Practice Tasks</a></li>
+                    <li><a href="#exercises">9. Exercises</a></li>
+                    <li><a href="#checkpoints">10. Theory Checkpoints</a></li>
+                    <li><a href="#mini-projects">11. Mini Projects</a></li>
+                    <li><a href="#major-project">12. Major Project</a></li>
+                    <li><a href="#bookstore">13. Bookstore Case Study</a></li>
+                    <li><a href="#architecture">14. Architecture Mapping</a></li>
+                    <li><a href="#interview-prep">15. Interview Prep</a></li>
+                    <li><a href="#mistakes">16. Common Mistakes</a></li>
+                    <li><a href="#best-practices">17. Best Practices</a></li>
+                    <li><a href="#tools">18. Tools & Stack</a></li>
+                    <li><a href="#certifications">19. Certifications</a></li>
+                    <li><a href="#resources">20. Free Resources</a></li>
+                    <li><a href="#documentation">21. Documentation</a></li>
+                    <li><a href="#github-roadmap">22. GitHub Roadmap</a></li>
+                    <li><a href="#resume-projects">23. Resume Projects</a></li>
+                    <li><a href="#outcomes">24. Career Outcomes</a></li>
+                    <li><a href="#next-readiness">25. Next Phase Readiness</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content-area">
+            <div class="content-container">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span>Phase 4: Spring MVC & Web Development</span>
+                </div>
+
+                <div class="animate-fade-in">
+                    <span class="badge badge-info">Intermediate Level</span>
+                    <h1 class="premium-title">Spring MVC & Web Development</h1>
+                    <p class="phase-description">Learn to build professional web applications and RESTful services using the MVC pattern. Master the request-response lifecycle and modern API design.</p>
+                </div>
+                
+                <section id="overview">
+                    <h2 class="premium-title">1. Full Phase Overview</h2>
+                    <p>Phase 4 is where your Java applications meet the world. Spring MVC (Model-View-Controller) is the architectural heart of web development in the Spring ecosystem. In this phase, you will master the Request-Response lifecycle, understand the internal mechanics of the DispatcherServlet, and learn to build both high-performance RESTful APIs and interactive server-side rendered applications. You'll move from basic endpoint mapping to advanced concepts like Content Negotiation, Interceptors, and Global Exception Handling.</p>
+                </section>
+
+                <section id="why-matters">
+                    <h2 class="premium-title">2. Why This Phase Matters</h2>
+                    <div class="tip-box">
+                        <p>The web is the primary interface for almost all enterprise software. Understanding how to build robust, secure, and scalable web layers is critical. Spring MVC provides the tools to handle millions of concurrent requests while maintaining clean separation of concerns. Mastering this phase ensures you can build the "front door" of any enterprise system, whether it's a mobile app backend or a complex web dashboard.</p>
+                    </div>
+                </section>
+
+                <section id="theoretical-roadmap">
+                    <h2 class="premium-title">3. Complete Theoretical Roadmap</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Concept</th>
+                                    <th>Internal Working</th>
+                                    <th>Enterprise Benefit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>DispatcherServlet</strong></td>
+                                    <td>The Front Controller Pattern</td>
+                                    <td>Centralized request handling and orchestration.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Handler Mapping</strong></td>
+                                    <td>Reflection-based endpoint lookup</td>
+                                    <td>Dynamic and flexible URL routing.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>View Resolvers</strong></td>
+                                    <td>Logical to Physical view mapping</td>
+                                    <td>Support for multiple UI technologies (Thymeleaf, JSP, etc.).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>HTTP Message Converters</strong></td>
+                                    <td>Jackson/Gson Serialization</td>
+                                    <td>Automatic JSON/XML data binding for APIs.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="topic-breakdown">
+                    <h2 class="premium-title">4. Deep Topic-by-Topic Breakdown</h2>
+                    <div class="module-card">
+                        <h3>I. The MVC Pattern in Depth</h3>
+                        <p>Understand the separation between data (Model), presentation (View), and logic (Controller).</p>
+                        <ul>
+                            <li><strong>Model:</strong> Using `ModelMap` and `ModelAndView`.</li>
+                            <li><strong>View:</strong> Server-side rendering vs JSON responses.</li>
+                            <li><strong>Controller:</strong> Handling HTTP verbs (GET, POST, PUT, DELETE, PATCH).</li>
+                        </ul>
+                    </div>
+                    <div class="module-card">
+                        <h3>II. RESTful Architecture</h3>
+                        <p>Master the principles of REST: Statelessness, Resource-based URLs, and HATEOAS.</p>
+                        <ul>
+                            <li><strong>@RestController:</strong> Why it's the standard for modern APIs.</li>
+                            <li><strong>Response Entities:</strong> Controlling HTTP status codes and headers.</li>
+                            <li><strong>Path Variables vs Request Params:</strong> When to use which.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="curriculum">
+                    <h2 class="premium-title">5. Subtopic-by-Subtopic Curriculum</h2>
+                    <div class="objectives-grid">
+                        <div class="checklist-item">
+                            <input type="checkbox" disabled checked>
+                            <div><strong>Validation API:</strong> JSR-380 (Bean Validation) with @Valid and @NotNull.</div>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" disabled checked>
+                            <div><strong>Global Exceptions:</strong> @ControllerAdvice and @ExceptionHandler patterns.</div>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" disabled checked>
+                            <div><strong>Interceptors:</strong> Custom pre-handle and post-handle logic for logging/auth.</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="progression">
+                    <h2 class="premium-title">6. Chronological Progression</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 1: Web Architect</h4>
+                                <p>Master the Servlet lifecycle and Spring MVC's Front Controller pattern.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 2: REST Developer</h4>
+                                <p>Building robust APIs with JSON processing and proper HTTP semantics.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 3: Full-Stack Integration</h4>
+                                <p>Server-side rendering with Thymeleaf and handling complex form data.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 4: Enterprise Middleware</h4>
+                                <p>Implementing Interceptors, Filters, and Global Exception strategies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="mastery-roadmap">
+                    <h2 class="premium-title">7. Weekly Mastery Roadmap</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Week 1:</strong> Trace a request from the browser to a Controller and back.</li>
+                            <li><strong>Week 2:</strong> Design a REST API that follows Richardson Maturity Model Level 2.</li>
+                            <li><strong>Week 3:</strong> Build a multi-page dashboard with dynamic Thymeleaf fragments.</li>
+                            <li><strong>Week 4:</strong> Successfully handle a custom exception with a 404/500 JSON response.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="practice-tasks">
+                    <h2 class="premium-title">8. Practice Tasks</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Build a "Weather API" that consumes a public endpoint and re-formats the data.</li>
+                            <li>Create a "User Profile" form with real-time server-side validation.</li>
+                            <li>Implement a Request Interceptor that logs the execution time of every endpoint.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="exercises">
+                    <h2 class="premium-title">9. Exercises</h2>
+                    <p><strong>Mental Model:</strong> Explain why `DispatcherServlet` is called a "Front Controller". Compare it to the old way of writing one Servlet per endpoint.</p>
+                    <p><strong>Code Review:</strong> Refactor a controller with 500 lines of code into a thin controller with service delegation.</p>
+                </section>
+
+                <section id="checkpoints">
+                    <h2 class="premium-title">10. Theory Checkpoints</h2>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled>
+                        <div>Can you explain the difference between @Controller and @RestController?</div>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled>
+                        <div>Do you know how Content Negotiation works (Accept vs Content-Type headers)?</div>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled>
+                        <div>Can you explain the role of `ModelAndView` in traditional MVC?</div>
+                    </div>
+                </section>
+
+                <section id="mini-projects">
+                    <h2 class="premium-title">11. Mini Projects</h2>
+                    <ul>
+                        <li><strong>URL Shortener:</strong> A REST API that generates and redirects short URLs using Spring MVC.</li>
+                        <li><strong>File Upload Server:</strong> A system that handles multi-part file uploads with size limits and type validation.</li>
+                    </ul>
+                </section>
+
+                <section id="major-project">
+                    <h2 class="premium-title">12. Major Phase Project</h2>
+                    <div class="project-card">
+                        <h3>The API Gateway</h3>
+                        <p>Build a comprehensive RESTful API for a library system. Features include resource-based endpoints, versioning (v1/v2), global error handling, and HATEOAS support.</p>
+                        <div class="tag">Spring MVC</div>
+                        <div class="tag">REST</div>
+                        <div class="tag">Jackson</div>
+                    </div>
+                </section>
+
+                <section id="bookstore">
+                    <h2 class="premium-title">13. Enterprise Bookstore Implementation</h2>
+                    <div class="tip-box">
+                        <p><strong>Master Project Integration:</strong> In this phase, we build the <strong>Web Interface</strong> for the Global Bookstore.</p>
+                        <ul>
+                            <li><code>BookController</code>: Provides REST endpoints for mobile apps and Thymeleaf views for the web.</li>
+                            <li><code>CartInterceptor</code>: Manages shopping cart sessions across different requests.</li>
+                            <li><code>GlobalExceptionHandler</code>: Ensures that "Book Not Found" returns a clean 404 instead of a stack trace.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="architecture">
+                    <h2 class="premium-title">14. Architecture Mapping</h2>
+                    <p>In a <strong>N-tier Architecture</strong>, this phase covers the <strong>Presentation Layer (Web Layer)</strong>. You will learn to keep this layer thin, focusing only on HTTP handling, while delegating all business logic to the Service Layer mastered in Phase 3.</p>
+                </section>
+
+                <section id="interview-prep">
+                    <h2 class="premium-title">15. Interview Prep (3 Levels)</h2>
+                    <div class="interview-card">
+                        <strong>Beginner:</strong> What is @RequestMapping and how is it different from @GetMapping?
+                    </div>
+                    <div class="interview-card">
+                        <strong>Intermediate:</strong> How does Spring MVC handle data binding from a form to a Java object?
+                    </div>
+                    <div class="interview-card">
+                        <strong>Advanced:</strong> Explain the <strong>DeferredResult</strong> and <strong>Callable</strong> for asynchronous request processing in Spring MVC.
+                    </div>
+                </section>
+
+                <section id="mistakes">
+                    <h2 class="premium-title">16. Common Mistakes</h2>
+                    <div class="warning-box">
+                        <ul>
+                            <li><strong>Hard-coding Status Codes:</strong> Using 200 OK for everything instead of proper 201, 204, 400, etc.</li>
+                            <li><strong>Leaking Domain Models:</strong> Returning JPA Entities directly in the API instead of using DTOs.</li>
+                            <li><strong>Ignoring Thread Safety:</strong> Storing user-specific data in Controller member variables.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="best-practices">
+                    <h2 class="premium-title">17. Best Practices</h2>
+                    <ul>
+                        <li><strong>Use DTOs:</strong> Always decouple your API structure from your Database structure.</li>
+                        <li><strong>Follow REST Semantics:</strong> Use PUT for updates, DELETE for removals, and POST for creations.</li>
+                        <li><strong>Centralize Error Handling:</strong> Use @ControllerAdvice to keep controllers clean.</li>
+                    </ul>
+                </section>
+
+                <section id="tools">
+                    <h2 class="premium-title">18. Tools & Stack</h2>
+                    <ul>
+                        <li><strong>Postman/Insomnia:</strong> For testing and documenting REST APIs.</li>
+                        <li><strong>Swagger/OpenAPI:</strong> For automatic API documentation.</li>
+                        <li><strong>Thymeleaf Layout Dialect:</strong> For reusable UI templates.</li>
+                    </ul>
+                </section>
+
+                <section id="certifications">
+                    <h2 class="premium-title">19. Certifications</h2>
+                    <p>Spring Professional Certification (Web Section Focus).</p>
+                </section>
+
+                <section id="resources">
+                    <h2 class="premium-title">20. Free Resources</h2>
+                    <ul>
+                        <li><a href="#">Building a RESTful Web Service</a> - Official Spring Guide.</li>
+                        <li><a href="#">Thymeleaf Documentation</a> - Modern server-side Java templates.</li>
+                    </ul>
+                </section>
+
+                <section id="documentation">
+                    <h2 class="premium-title">21. Documentation</h2>
+                    <ul>
+                        <li><a href="#">Spring Framework Web Documentation</a></li>
+                        <li><a href="#">RFC 7231 (HTTP Semantics)</a></li>
+                    </ul>
+                </section>
+
+                <section id="github-roadmap">
+                    <h2 class="premium-title">22. GitHub Roadmap</h2>
+                    <p>Your repository should feature a <strong>"Modern-Web-API"</strong> project showcasing REST best practices, DTO patterns, and HATEOAS.</p>
+                </section>
+
+                <section id="resume-projects">
+                    <h2 class="premium-title">23. Resume Projects</h2>
+                    <p><em>"Architected a RESTful API gateway using Spring MVC, supporting multi-tenant requirements and achieving 99.9% uptime by implementing robust global exception handling and circuit breakers."</em></p>
+                </section>
+
+                <section id="outcomes">
+                    <h2 class="premium-title">24. Career Outcomes</h2>
+                    <p>Qualified for roles like: <strong>Full Stack Developer (Java)</strong>, <strong>API Engineer</strong>, <strong>Web Developer</strong>.</p>
+                </section>
+
+                <section id="next-readiness">
+                    <h2 class="premium-title">25. Next Phase Readiness</h2>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled>
+                        <div>I can build a complete CRUD API from scratch.</div>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled>
+                        <div>I understand the Request-Response lifecycle in Spring MVC.</div>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled>
+                        <div>I am ready to learn <strong>Spring Boot & Auto-configuration</strong>.</div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer class="premium-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>JavaAcademy</h2>
+                <p>Building the next generation of Enterprise Architects.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Back to Roadmap</a></li>
+                    <li><a href="phase5-spring-boot.html">Next: Phase 5</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: #94a3b8; font-size: 0.85rem;">
+            &copy; 2026 Java Enterprise Academy. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>

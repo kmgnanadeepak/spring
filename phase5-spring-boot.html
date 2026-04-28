@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 5: Spring Boot Mastery | Java Enterprise Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="docs-page">
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                Java<span>Academy</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resources.html">Resources</a>
+                <a href="projects.html">Projects</a>
+                <a href="interview.html">Interview</a>
+                <a href="career.html">Career</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="docs-layout">
+        <aside class="sidebar">
+            <div class="sidebar-title">Phase 5 Navigation</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#overview" class="active">1. Phase Overview</a></li>
+                    <li><a href="#why-matters">2. Why This Phase Matters</a></li>
+                    <li><a href="#theoretical-roadmap">3. Theoretical Roadmap</a></li>
+                    <li><a href="#topic-breakdown">4. Topic Breakdown</a></li>
+                    <li><a href="#subtopic-curriculum">5. Subtopic Curriculum</a></li>
+                    <li><a href="#progression">6. Chronological Progression</a></li>
+                    <li><a href="#mastery-roadmap">7. Weekly Mastery</a></li>
+                    <li><a href="#practice-tasks">8. Practice Tasks</a></li>
+                    <li><a href="#exercises">9. Exercises</a></li>
+                    <li><a href="#theory-checkpoints">10. Theory Checkpoints</a></li>
+                    <li><a href="#mini-projects">11. Mini Projects</a></li>
+                    <li><a href="#major-project">12. Major Phase Project</a></li>
+                    <li><a href="#bookstore">13. Bookstore Case</a></li>
+                    <li><a href="#architecture">14. Architecture Mapping</a></li>
+                    <li><a href="#interview-questions">15. Interview Prep</a></li>
+                    <li><a href="#mistakes">16. Common Mistakes</a></li>
+                    <li><a href="#best-practices">17. Best Practices</a></li>
+                    <li><a href="#tools">18. Tools</a></li>
+                    <li><a href="#certifications">19. Certifications</a></li>
+                    <li><a href="#resources">20. Free Resources</a></li>
+                    <li><a href="#documentation">21. Documentation</a></li>
+                    <li><a href="#github">22. GitHub Roadmap</a></li>
+                    <li><a href="#resume">23. Resume Projects</a></li>
+                    <li><a href="#outcomes">24. Career Outcomes</a></li>
+                    <li><a href="#next-readiness">25. Next Phase Readiness</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content-area">
+            <div class="content-container">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span>Phase 5: Spring Boot Mastery</span>
+                </div>
+
+                <div class="animate-fade-in">
+                    <span class="badge badge-info">Intermediate Level</span>
+                    <h1 class="premium-title">Spring Boot Mastery</h1>
+                    <p class="phase-description">Master the art of building production-ready applications with zero friction and high productivity. Learn the mechanics of auto-configuration and observability.</p>
+                </div>
+                
+                <section id="overview">
+                    <h2 class="premium-title">1. Phase Overview</h2>
+                    <p>Spring Boot is the opinionated evolution of the Spring Framework. In this phase, you'll master the art of building production-ready applications with minimal configuration. You'll dive deep into the mechanics of <strong>Auto-configuration</strong>, <strong>Starter Dependencies</strong>, and <strong>Embedded Servers</strong>, transforming how you approach enterprise Java development.</p>
+                </section>
+
+                <section id="why-matters">
+                    <h2 class="premium-title">2. Why This Phase Matters</h2>
+                    <div class="module-card">
+                        <p>In modern software engineering, speed to market and operational excellence are critical. Spring Boot enables this by:</p>
+                        <ul>
+                            <li><strong>Zero XML:</strong> Eliminating the need for complex XML configuration.</li>
+                            <li><strong>Opinionated Defaults:</strong> Providing sensible defaults that work for 80% of use cases.</li>
+                            <li><strong>Production-Ready Features:</strong> Built-in metrics, health checks, and externalized configuration.</li>
+                            <li><strong>Simplified Deployment:</strong> Packaging applications as self-contained executable JARs with embedded servers.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="theoretical-roadmap">
+                    <h2 class="premium-title">3. Complete Theoretical Roadmap</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Concept</th>
+                                    <th>Internal Working</th>
+                                    <th>Enterprise Benefit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Auto-configuration</strong></td>
+                                    <td>@Conditional annotations & spring.factories</td>
+                                    <td>Drastically reduces boilerplate configuration code.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Starter POMs</strong></td>
+                                    <td>Dependency aggregation and version management</td>
+                                    <td>Simplifies build files and avoids dependency hell.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Embedded Servers</strong></td>
+                                    <td>Tomcat/Jetty/Undertow integration</td>
+                                    <td>"Run anywhere" capability without external server setup.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Actuator</strong></td>
+                                    <td>JMX & HTTP management endpoints</td>
+                                    <td>Real-time monitoring and management in production.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="topic-breakdown">
+                    <h2 class="premium-title">4. Deep Topic Breakdown</h2>
+                    
+                    <div class="module-card">
+                        <h3>4.1 The @SpringBootApplication Annotation</h3>
+                        <p>This single annotation is a combination of three powerful features:</p>
+                        <ul>
+                            <li><strong>@SpringBootConfiguration:</strong> Designates the class as a source of bean definitions.</li>
+                            <li><strong>@EnableAutoConfiguration:</strong> Tells Spring Boot to start adding beans based on classpath settings.</li>
+                            <li><strong>@ComponentScan:</strong> Enables component scanning in the package where the class is located.</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-card">
+                        <h3>4.2 Auto-configuration Internals</h3>
+                        <p>How does Spring Boot know which beans to create? It uses <code>@Conditional</code> annotations:</p>
+                        <ul>
+                            <li><code>@ConditionalOnClass</code>: Only if a specific class is present.</li>
+                            <li><code>@ConditionalOnMissingBean</code>: Only if the user hasn't defined their own bean.</li>
+                            <li><code>@ConditionalOnProperty</code>: Based on application.properties settings.</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-card">
+                        <h3>4.3 Externalized Configuration</h3>
+                        <p>Spring Boot supports multiple sources for configuration, loaded in a specific order of precedence:</p>
+                        <ol>
+                            <li>Command-line arguments.</li>
+                            <li>Java System properties.</li>
+                            <li>OS environment variables.</li>
+                            <li>application.properties / application.yml (inside and outside the JAR).</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section id="subtopic-curriculum">
+                    <h2 class="premium-title">5. Subtopic Curriculum</h2>
+                    <div class="objectives-grid">
+                        <div class="checklist-item">
+                            <input type="checkbox" disabled checked>
+                            <div>
+                                <strong>Bootstrapping:</strong> Spring Initializr, project structure, and Main class.
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" disabled checked>
+                            <div>
+                                <strong>Configuration:</strong> YAML vs Properties, @Value, @ConfigurationProperties, and Profiles.
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" disabled checked>
+                            <div>
+                                <strong>Web Development:</strong> Embedded Tomcat, JSON/XML mapping, and custom error pages.
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" disabled checked>
+                            <div>
+                                <strong>Monitoring:</strong> Actuator endpoints (/health, /metrics, /env) and custom health indicators.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="progression">
+                    <h2 class="premium-title">6. Chronological Progression</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 1: Hello Spring Boot</h4>
+                                <p>Project setup, understanding the starter parent, and creating your first REST controller.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 2: Configuration Mastery</h4>
+                                <p>Using @ConfigurationProperties for type-safe config and managing environment-specific settings with Profiles.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 3: Deep Dive into Auto-config</h4>
+                                <p>Writing your own custom starter and understanding how to disable specific auto-configurations.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 4: Production-Ready Boot</h4>
+                                <p>Implementing Actuator, custom metrics, and logging with Logback/Log4j2.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="mastery-roadmap">
+                    <h2 class="premium-title">7. Weekly Mastery Roadmap</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Week 1:</strong> Can explain the benefit of <code>spring-boot-starter-parent</code>.</li>
+                            <li><strong>Week 2:</strong> Successfully migrates a complex properties file to YAML.</li>
+                            <li><strong>Week 3:</strong> Can debug auto-configuration issues using <code>--debug</code> flag.</li>
+                            <li><strong>Week 4:</strong> Exposes custom application info via the <code>/info</code> endpoint.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="practice-tasks">
+                    <h2 class="premium-title">8. Practice Tasks</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Create a <strong>Multi-Profile Application</strong> that uses H2 for 'dev' and PostgreSQL for 'prod'.</li>
+                            <li>Implement a <strong>Custom Health Indicator</strong> that checks the status of a third-party API.</li>
+                            <li>Build a <strong>Banner Generator</strong> to customize the Spring Boot startup logo.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="exercises">
+                    <h2 class="premium-title">9. Exercises</h2>
+                    <div class="module-card">
+                        <h4>Theoretical Challenges</h4>
+                        <ul>
+                            <li>What is the difference between @SpringBootApplication and @EnableAutoConfiguration?</li>
+                            <li>How does Spring Boot resolve dependency versions without explicit version tags in child POMs?</li>
+                            <li>Explain the concept of "Fat JARs".</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="theory-checkpoints">
+                    <h2 class="premium-title">10. Theory Checkpoints</h2>
+                    <div class="warning-box">
+                        <strong>Mastery Check:</strong>
+                        <ul>
+                            <li>Do you understand why Spring Boot uses an embedded server?</li>
+                            <li>Can you list the loading order of configuration properties?</li>
+                            <li>Do you know how to exclude a specific auto-configuration class?</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="mini-projects">
+                    <h2 class="premium-title">11. Mini Projects</h2>
+                    <div class="project-card">
+                        <h4>1. Property Encryption Tool</h4>
+                        <p>Use Jasypt with Spring Boot to encrypt sensitive configuration values.</p>
+                    </div>
+                    <div class="project-card">
+                        <h4>2. Dynamic Welcome Message</h4>
+                        <p>A service that returns a welcome message based on the active profile and system time.</p>
+                    </div>
+                </section>
+
+                <section id="major-project">
+                    <h2 class="premium-title">12. Major Phase Project</h2>
+                    <div class="project-card" style="border-left: 4px solid var(--highlight);">
+                        <h3>Spring Boot Bookstore API</h3>
+                        <p>The first production-ready iteration of the Bookstore system.</p>
+                        <ul>
+                            <li><strong>Features:</strong> RESTful endpoints, YAML configuration, Actuator integration, and custom logging.</li>
+                            <li><strong>Tech:</strong> Spring Boot 3.x, Maven, Actuator, DevTools.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="bookstore">
+                    <h2 class="premium-title">13. Enterprise Bookstore Case Study</h2>
+                    <div class="tip-box">
+                        <p><strong>Phase Implementation:</strong> Transforming the core logic into a <strong>Bootstrapped Service</strong>.</p>
+                        <ul>
+                            <li><code>BookstoreApplication</code>: The entry point using @SpringBootApplication.</li>
+                            <li><code>application-dev.yml</code>: Configuration for local H2 database.</li>
+                            <li><code>/actuator/health</code>: Monitoring the bookstore's operational status.</li>
+                        </ul>
+                        <p><em>Focus:</em> Moving away from manual setup to a rapid-development environment using Starters.</p>
+                    </div>
+                </section>
+
+                <section id="architecture">
+                    <h2 class="premium-title">14. Architecture Mapping</h2>
+                    <div class="module-card">
+                        <p>Spring Boot acts as the <strong>Execution Engine</strong> for your architecture.</p>
+                        <ul>
+                            <li><strong>Application Layer:</strong> Manages the lifecycle of the entire N-tier system.</li>
+                            <li><strong>Operations Layer:</strong> Actuator provides a bridge between the code and SRE teams.</li>
+                            <li><strong>Deployment Layer:</strong> The JAR-based packaging simplifies CI/CD pipelines.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="interview-questions">
+                    <h2 class="premium-title">15. Interview Preparation</h2>
+                    <div class="interview-card">
+                        <span class="badge badge-info">Beginner</span>
+                        <strong>Q: What is Spring Boot and how is it different from the Spring Framework?</strong>
+                        <p>A: Spring Boot is an extension of the Spring Framework that provides "opinionated" defaults to simplify the setup and development of new applications.</p>
+                    </div>
+                    <div class="interview-card">
+                        <span class="badge badge-warning">Intermediate</span>
+                        <strong>Q: What are the advantages of using YAML over properties files?</strong>
+                        <p>A: YAML is more readable, supports hierarchical structures, and reduces repetition (DRY).</p>
+                    </div>
+                    <div class="interview-card">
+                        <span class="badge badge-error">Advanced</span>
+                        <strong>Q: Explain the internal mechanism of @EnableAutoConfiguration.</strong>
+                        <p>A: It uses the <code>AutoConfigurationImportSelector</code> to read the <code>META-INF/spring.factories</code> or <code>META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports</code> file to find and load candidate configuration classes based on conditional annotations.</p>
+                    </div>
+                </section>
+
+                <section id="mistakes">
+                    <h2 class="premium-title">16. Common Mistakes</h2>
+                    <div class="warning-box">
+                        <ul>
+                            <li><strong>Ignoring the Starter Parent:</strong> Trying to manage all versions manually instead of letting the parent POM do it.</li>
+                            <li><strong>Overriding Auto-config unnecessarily:</strong> Writing custom beans when a simple property change would suffice.</li>
+                            <li><strong>Hardcoding Profiles:</strong> Not leveraging environment variables for profile activation in production.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="best-practices">
+                    <h2 class="premium-title">17. Best Practices</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Use @ConfigurationProperties:</strong> Prefer it over @Value for groupable and type-safe configuration.</li>
+                            <li><strong>Keep Main Class in Root Package:</strong> Ensures component scanning works correctly without extra config.</li>
+                            <li><strong>Monitor in Production:</strong> Always enable Actuator but secure it properly.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="tools">
+                    <h2 class="premium-title">18. Recommended Tools</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Spring Boot DevTools:</strong> For automatic restarts and LiveReload.</li>
+                            <li><strong>HTTPie / Postman:</strong> For testing REST endpoints.</li>
+                            <li><strong>JConsole:</strong> To monitor Actuator data via JMX.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="certifications">
+                    <h2 class="premium-title">19. Relevant Certifications</h2>
+                    <ul>
+                        <li>Spring Professional Develop Certificate (Includes Boot specific sections).</li>
+                    </ul>
+                </section>
+
+                <section id="resources">
+                    <h2 class="premium-title">20. Free Resources</h2>
+                    <ul>
+                        <li><a href="https://spring.io/projects/spring-boot">Official Spring Boot Project Page</a></li>
+                        <li><a href="https://www.youtube.com/playlist?list=PLqq-6Pq4lTTbx8p2Bn7eLGCiLpARAs973">Spring Academy - Spring Boot Tutorials</a></li>
+                    </ul>
+                </section>
+
+                <section id="documentation">
+                    <h2 class="premium-title">21. Essential Documentation</h2>
+                    <ul>
+                        <li><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/index.html">Spring Boot Reference Guide</a></li>
+                    </ul>
+                </section>
+
+                <section id="github">
+                    <h2 class="premium-title">22. GitHub Portfolio Roadmap</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Repository: <code>spring-boot-essentials</code> showing auto-config overrides and custom starters.</li>
+                            <li>Repository: <code>bookstore-rest-api</code> - A fully functional RESTful service with monitoring.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="resume">
+                    <h2 class="premium-title">23. How to Showcase on Resume</h2>
+                    <div class="tip-box">
+                        <p><strong>Bullet Point:</strong> "Developed and deployed a production-ready REST API using Spring Boot 3, leveraging Auto-configuration and Starters to reduce initial setup time by 70%, and integrating Spring Actuator for real-time observability."</p>
+                    </div>
+                </section>
+
+                <section id="outcomes">
+                    <h2 class="premium-title">24. Career Outcomes</h2>
+                    <ul>
+                        <li>Spring Boot Developer.</li>
+                        <li>Backend Software Engineer.</li>
+                        <li>API Developer.</li>
+                    </ul>
+                </section>
+
+                <section id="next-readiness">
+                    <h2 class="premium-title">25. Next Phase Readiness Checklist</h2>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled checked>
+                        <span>I can explain the @SpringBootApplication annotation.</span>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled checked>
+                        <span>I understand how to use Profiles for environment-specific config.</span>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled checked>
+                        <span>I know how to monitor application health using Actuator.</span>
+                    </div>
+                    <div class="checklist-item" style="margin-top: 2rem;">
+                        <a href="phase6-backend-development.html" class="btn-premium">Proceed to Phase 6: Backend Dev &rarr;</a>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer class="premium-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>JavaAcademy</h2>
+                <p>Building the next generation of Enterprise Architects.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Back to Roadmap</a></li>
+                    <li><a href="phase6-backend-development.html">Next: Phase 6</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: #94a3b8; font-size: 0.85rem;">
+            &copy; 2026 Java Enterprise Academy. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>

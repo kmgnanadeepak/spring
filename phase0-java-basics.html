@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 0: Java Fundamentals | Java Enterprise Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="docs-page">
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                Java<span>Academy</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resources.html">Resources</a>
+                <a href="projects.html">Projects</a>
+                <a href="interview.html">Interview</a>
+                <a href="career.html">Career</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="docs-layout">
+        <aside class="sidebar">
+            <div class="sidebar-title">Phase 0 Navigation</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#overview" class="active">1. Phase Overview</a></li>
+                    <li><a href="#why-matters">2. Why This Phase Matters</a></li>
+                    <li><a href="#theoretical-roadmap">3. Theoretical Roadmap</a></li>
+                    <li><a href="#topic-breakdown">4. Topic Breakdown</a></li>
+                    <li><a href="#subtopic-curriculum">5. Subtopic Curriculum</a></li>
+                    <li><a href="#progression">6. Chronological Progression</a></li>
+                    <li><a href="#mastery-roadmap">7. Weekly Mastery</a></li>
+                    <li><a href="#practice-tasks">8. Practice Tasks</a></li>
+                    <li><a href="#exercises">9. Exercises</a></li>
+                    <li><a href="#theory-checkpoints">10. Theory Checkpoints</a></li>
+                    <li><a href="#mini-projects">11. Mini Projects</a></li>
+                    <li><a href="#major-project">12. Major Phase Project</a></li>
+                    <li><a href="#bookstore">13. Bookstore Case</a></li>
+                    <li><a href="#architecture">14. Architecture Mapping</a></li>
+                    <li><a href="#interview-questions">15. Interview Prep</a></li>
+                    <li><a href="#mistakes">16. Common Mistakes</a></li>
+                    <li><a href="#best-practices">17. Best Practices</a></li>
+                    <li><a href="#tools">18. Tools</a></li>
+                    <li><a href="#certifications">19. Certifications</a></li>
+                    <li><a href="#resources">20. Free Resources</a></li>
+                    <li><a href="#documentation">21. Documentation</a></li>
+                    <li><a href="#github">22. GitHub Roadmap</a></li>
+                    <li><a href="#resume">23. Resume Projects</a></li>
+                    <li><a href="#outcomes">24. Career Outcomes</a></li>
+                    <li><a href="#next-readiness">25. Next Phase Readiness</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content-area">
+            <div class="content-container">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span>Phase 0: Java Fundamentals</span>
+                </div>
+
+                <div class="animate-fade-in">
+                    <span class="badge badge-info">Foundation Level</span>
+                    <h1 class="premium-title">Java Fundamentals</h1>
+                    <p class="phase-description">Master the bedrock of modern enterprise software engineering. Build the logic and syntax skills required for the professional ecosystem.</p>
+                </div>
+                
+                <section id="overview">
+                    <h2 class="premium-title">1. Phase Overview</h2>
+                    <p>This phase is the bedrock of your engineering journey. You will master the core syntax, logic, and Object-Oriented Programming (OOP) principles that power the Java ecosystem. We move beyond "how" to write code, focusing on "why" certain patterns are used in professional settings, and how the Java Virtual Machine (JVM) manages resources under the hood.</p>
+                </section>
+
+                <section id="why-matters">
+                    <h2 class="premium-title">2. Why This Phase Matters</h2>
+                    <div class="module-card">
+                        <p>In the enterprise world, code is not just about functionality; it's about <strong>maintainability, scalability, and performance</strong>. Understanding Java Fundamentals allows you to:</p>
+                        <ul>
+                            <li>Write memory-efficient code by understanding the Heap and Stack.</li>
+                            <li>Design resilient systems using SOLID principles.</li>
+                            <li>Debug complex enterprise issues by understanding the JVM execution model.</li>
+                            <li>Prepare for advanced frameworks like Spring, which rely heavily on these foundations.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="theoretical-roadmap">
+                    <h2 class="premium-title">3. Complete Theoretical Roadmap</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Domain</th>
+                                    <th>Core Concept</th>
+                                    <th>Architectural Significance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Runtime Environment</strong></td>
+                                    <td>JVM Architecture, JRE vs JDK</td>
+                                    <td>Platform independence and resource management.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Memory Management</strong></td>
+                                    <td>Stack vs Heap, Garbage Collection basics</td>
+                                    <td>Preventing memory leaks in long-running services.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>OOP Paradigms</strong></td>
+                                    <td>Encapsulation, Inheritance, Polymorphism, Abstraction</td>
+                                    <td>Building decoupled and reusable enterprise components.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Clean Design</strong></td>
+                                    <td>SOLID Principles, DRY, KISS</td>
+                                    <td>Reducing technical debt in large-scale projects.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="topic-breakdown">
+                    <h2 class="premium-title">4. Deep Topic Breakdown</h2>
+                    
+                    <div class="module-card">
+                        <h3>4.1 Java Memory Model (JMM)</h3>
+                        <p>Understanding how Java manages memory is crucial for enterprise developers.</p>
+                        <ul>
+                            <li><strong>Stack Memory:</strong> Used for static memory allocation and thread execution. Stores primitive types and references to objects in the heap.</li>
+                            <li><strong>Heap Memory:</strong> Used for dynamic memory allocation of Java objects at runtime.</li>
+                            <li><strong>Metaspace:</strong> Stores class metadata (replaces PermGen in Java 8+).</li>
+                        </ul>
+                    </div>
+
+                    <div class="module-card">
+                        <h3>4.2 Object Lifecycle</h3>
+                        <p>From class loading to garbage collection.</p>
+                        <ol>
+                            <li><strong>Loading:</strong> The ClassLoader loads the .class file into memory.</li>
+                            <li><strong>Initialization:</strong> Static blocks and variables are initialized.</li>
+                            <li><strong>Instantiation:</strong> The <code>new</code> keyword creates an object on the heap.</li>
+                            <li><strong>Garbage Collection:</strong> When an object is no longer reachable, it's marked for collection.</li>
+                        </ol>
+                    </div>
+
+                    <div class="module-card">
+                        <h3>4.3 SOLID Principles</h3>
+                        <ul>
+                            <li><strong>S - Single Responsibility:</strong> A class should have one reason to change.</li>
+                            <li><strong>O - Open/Closed:</strong> Software entities should be open for extension but closed for modification.</li>
+                            <li><strong>L - Liskov Substitution:</strong> Objects of a superclass should be replaceable with objects of its subclasses.</li>
+                            <li><strong>I - Interface Segregation:</strong> Clients should not be forced to depend on methods they do not use.</li>
+                            <li><strong>D - Dependency Inversion:</strong> Depend on abstractions, not concretions.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="subtopic-curriculum">
+                    <h2 class="premium-title">5. Subtopic Curriculum</h2>
+                    <div class="objectives-grid">
+                        <div class="checklist-item">
+                            <input type="checkbox" disabled checked>
+                            <div>
+                                <strong>Basic Syntax:</strong> Variables, Primitives, Wrappers, Operators, String Pool.
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" disabled checked>
+                            <div>
+                                <strong>Control Flow:</strong> If/Else, Switch (Modern), Loops (For-each), Break/Continue.
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" disabled checked>
+                            <div>
+                                <strong>OOP Core:</strong> Class vs Object, Constructors (Chaining), <code>this</code> and <code>super</code> keywords.
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" disabled checked>
+                            <div>
+                                <strong>Polymorphism:</strong> Method Overloading (Static) vs Overriding (Dynamic), Virtual Method Invocation.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="progression">
+                    <h2 class="premium-title">6. Chronological Progression</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 1: Foundations & Memory</h4>
+                                <p>JDK Setup, JVM Architecture, Primitive Types vs Reference Types, and Stack/Heap visualization.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 2: Logic & Class Design</h4>
+                                <p>Control flow, Writing clean methods, and designing your first domain classes (Book, User).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Week 3: The Power of OOP</h4>
+                                <p>Inheritance vs Composition, Interfaces for decoupling, and Abstract classes for shared behavior.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="mastery-roadmap">
+                    <h2 class="premium-title">7. Weekly Mastery Roadmap</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Week 1:</strong> Able to explain the difference between JDK, JRE, and JVM.</li>
+                            <li><strong>Week 2:</strong> Can write complex nested loops and switch expressions.</li>
+                            <li><strong>Week 3:</strong> Designs a hierarchy of classes using Polymorphism correctly.</li>
+                            <li><strong>Week 4:</strong> Understands and implements Exception Handling and basic Collections.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="practice-tasks">
+                    <h2 class="premium-title">8. Practice Tasks</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Implement a <strong>Temperature Converter</strong> with custom exception handling for invalid inputs.</li>
+                            <li>Create a <strong>Bank Account Simulator</strong> demonstrating Encapsulation (private fields, public methods).</li>
+                            <li>Build a <strong>Shape Hierarchy</strong> (Circle, Square, Triangle) to practice Polymorphism and Area calculation.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="exercises">
+                    <h2 class="premium-title">9. Exercises</h2>
+                    <div class="module-card">
+                        <h4>Theoretical Challenges</h4>
+                        <ul>
+                            <li>Explain why String is immutable in Java and how it relates to the String Pool.</li>
+                            <li>Draw a memory diagram for a simple program involving 3 objects and 2 method calls.</li>
+                            <li>Identify SOLID violations in a provided "Spaghetti Code" snippet.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="theory-checkpoints">
+                    <h2 class="premium-title">10. Theory Checkpoints</h2>
+                    <div class="warning-box">
+                        <strong>Stop! Before moving to Phase 1, ensure you can answer:</strong>
+                        <ul>
+                            <li>What is the difference between Method Overloading and Overriding?</li>
+                            <li>Why do we use Interfaces instead of Abstract Classes in many enterprise scenarios?</li>
+                            <li>What happens to an object when it becomes unreachable in the heap?</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="mini-projects">
+                    <h2 class="premium-title">11. Mini Projects</h2>
+                    <div class="project-card">
+                        <h4>1. Console Calculator</h4>
+                        <p>A feature-rich calculator using recursion for complex operations.</p>
+                    </div>
+                    <div class="project-card">
+                        <h4>2. Student Grading System</h4>
+                        <p>Uses Arrays and basic logic to manage student records and GPA calculations.</p>
+                    </div>
+                </section>
+
+                <section id="major-project">
+                    <h2 class="premium-title">12. Major Phase Project</h2>
+                    <div class="project-card" style="border-left: 4px solid var(--highlight);">
+                        <h3>Console-Based Library Management System</h3>
+                        <p>A complete system for managing a library inventory.</p>
+                        <ul>
+                            <li><strong>Features:</strong> Add/Remove/Search books, User registration, Borrowing logic.</li>
+                            <li><strong>Tech:</strong> Core Java, Collections (ArrayList), Exception Handling.</li>
+                            <li><strong>Architecture:</strong> Separated into Model (Book, User) and Service (LibraryManager) layers.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="bookstore">
+                    <h2 class="premium-title">13. Enterprise Bookstore Case Study</h2>
+                    <div class="tip-box">
+                        <p><strong>Phase Implementation:</strong> This is where we define our <strong>Domain Model</strong>.</p>
+                        <ul>
+                            <li><code>Book</code>: Encapsulates title, ISBN, price, and author.</li>
+                            <li><code>Author</code>: Contains biographical data.</li>
+                            <li><code>Inventory</code>: Uses a <code>List<Book></code> to manage the collection.</li>
+                        </ul>
+                        <p><em>Focus:</em> Ensuring strict encapsulation and using proper constructor chaining for book variations.</p>
+                    </div>
+                </section>
+
+                <section id="architecture">
+                    <h2 class="premium-title">14. Architecture Mapping</h2>
+                    <div class="module-card">
+                        <p>In a professional N-tier architecture, the concepts from this phase reside in the <strong>Domain Layer</strong> and <strong>Utility Layer</strong>.</p>
+                        <ul>
+                            <li><strong>Domain Layer:</strong> Your Classes (Book, Author) represent the core business data.</li>
+                            <li><strong>Service Layer:</strong> Your logic (loops, conditionals) forms the basis of business rules.</li>
+                            <li><strong>Infrastructure:</strong> Exception handling ensures the system doesn't crash during data access.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="interview-questions">
+                    <h2 class="premium-title">15. Interview Preparation</h2>
+                    <div class="interview-card">
+                        <span class="badge badge-info">Beginner</span>
+                        <strong>Q: What is the difference between <code>==</code> and <code>.equals()</code>?</strong>
+                        <p>A: <code>==</code> compares memory references (address), while <code>.equals()</code> compares the actual content of the objects (if overridden).</p>
+                    </div>
+                    <div class="interview-card">
+                        <span class="badge badge-warning">Intermediate</span>
+                        <strong>Q: Can we override a private or static method in Java?</strong>
+                        <p>A: No. Private methods are not visible to subclasses, and static methods are bonded to the class at compile-time (method hiding, not overriding).</p>
+                    </div>
+                    <div class="interview-card">
+                        <span class="badge badge-error">Advanced</span>
+                        <strong>Q: Explain the "Diamond Problem" in inheritance and how Java solves it.</strong>
+                        <p>A: The Diamond Problem occurs when a class inherits from two classes that have a common parent. Java avoids this by not supporting multiple inheritance of classes, but allows it via Interfaces (where conflicts must be resolved by the programmer).</p>
+                    </div>
+                </section>
+
+                <section id="mistakes">
+                    <h2 class="premium-title">16. Common Mistakes</h2>
+                    <div class="warning-box">
+                        <ul>
+                            <li><strong>Memory Leaks:</strong> Creating unnecessary objects inside high-frequency loops.</li>
+                            <li><strong>NullPointerExceptions:</strong> Not checking for null before calling methods on objects.</li>
+                            <li><strong>Hardcoding:</strong> Not using constants or configuration for values that might change.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="best-practices">
+                    <h2 class="premium-title">17. Best Practices</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Naming:</strong> Follow CamelCase for classes and variables. Use descriptive names.</li>
+                            <li><strong>DRY (Don't Repeat Yourself):</strong> Extract common logic into helper methods.</li>
+                            <li><strong>Composition over Inheritance:</strong> Prefer using objects as fields rather than extending classes unless a strict "is-a" relationship exists.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="tools">
+                    <h2 class="premium-title">18. Recommended Tools</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>IDE:</strong> IntelliJ IDEA (Ultimate or Community).</li>
+                            <li><strong>Build Tool:</strong> Maven (we'll start using this in Phase 1).</li>
+                            <li><strong>Static Analysis:</strong> SonarLint plugin for catching code smells early.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="certifications">
+                    <h2 class="premium-title">19. Relevant Certifications</h2>
+                    <p>Preparing for these will solidify your foundation:</p>
+                    <ul>
+                        <li>Oracle Certified Professional: Java SE 17 Developer (Exam 1Z0-829).</li>
+                    </ul>
+                </section>
+
+                <section id="resources">
+                    <h2 class="premium-title">20. Free Resources</h2>
+                    <ul>
+                        <li><a href="https://dev.java/learn/">Official Java Learning Path</a></li>
+                        <li><a href="https://www.mooc.fi/en/installation/netbeans/">University of Helsinki Java MOOC</a></li>
+                    </ul>
+                </section>
+
+                <section id="documentation">
+                    <h2 class="premium-title">21. Essential Documentation</h2>
+                    <ul>
+                        <li><a href="https://docs.oracle.com/en/java/javase/17/docs/api/index.html">Java SE 17 API Docs</a></li>
+                        <li><a href="https://docs.oracle.com/javase/tutorial/">The Java™ Tutorials (Oracle)</a></li>
+                    </ul>
+                </section>
+
+                <section id="github">
+                    <h2 class="premium-title">22. GitHub Portfolio Roadmap</h2>
+                    <div class="module-card">
+                        <p>By the end of this phase, your GitHub should have:</p>
+                        <ul>
+                            <li>A repository named <code>java-fundamentals-practice</code> containing all exercises.</li>
+                            <li>A polished repository for the <code>Library-Management-System</code> with a clean README.md.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="resume">
+                    <h2 class="premium-title">23. How to Showcase on Resume</h2>
+                    <div class="tip-box">
+                        <p><strong>Bullet Point Example:</strong> "Developed a robust Console-based Library Management System in Java SE, implementing OOP principles (Encapsulation, Polymorphism) and custom Exception Handling to ensure 99.9% runtime stability during edge-case testing."</p>
+                    </div>
+                </section>
+
+                <section id="outcomes">
+                    <h2 class="premium-title">24. Career Outcomes</h2>
+                    <p>After mastering this phase, you are qualified for:</p>
+                    <ul>
+                        <li>Junior Java Developer (Internships/Entry-level).</li>
+                        <li>QA Automation Engineer (Basic Scripting).</li>
+                    </ul>
+                </section>
+
+                <section id="next-readiness">
+                    <h2 class="premium-title">25. Next Phase Readiness Checklist</h2>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled checked>
+                        <span>I can explain the difference between a Class and an Object.</span>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled checked>
+                        <span>I understand how Java manages memory via the Stack and Heap.</span>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" disabled checked>
+                        <span>I can implement a multiple-interface hierarchy.</span>
+                    </div>
+                    <div class="checklist-item" style="margin-top: 2rem;">
+                        <a href="phase1-advanced-java.html" class="btn-premium">Proceed to Phase 1: Advanced Java &rarr;</a>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer class="premium-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>JavaAcademy</h2>
+                <p>Building the next generation of Enterprise Architects.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Back to Roadmap</a></li>
+                    <li><a href="phase1-advanced-java.html">Next: Phase 1</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: #94a3b8; font-size: 0.85rem;">
+            &copy; 2026 Java Enterprise Academy. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 8: Microservices | Java Enterprise Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="docs-page">
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                Java<span>Academy</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resources.html">Resources</a>
+                <a href="projects.html">Projects</a>
+                <a href="interview.html">Interview</a>
+                <a href="career.html">Career</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="docs-layout">
+        <aside class="sidebar">
+            <div class="sidebar-title">Phase 8 Navigation</div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#overview" class="active">1. Overview</a></li>
+                    <li><a href="#why-matters">2. Why It Matters</a></li>
+                    <li><a href="#theoretical-roadmap">3. Theoretical Roadmap</a></li>
+                    <li><a href="#topic-breakdown">4. Topic Breakdown</a></li>
+                    <li><a href="#curriculum">5. Subtopic Curriculum</a></li>
+                    <li><a href="#progression">6. Progression</a></li>
+                    <li><a href="#mastery-roadmap">7. Mastery Roadmap</a></li>
+                    <li><a href="#practice-tasks">8. Practice Tasks</a></li>
+                    <li><a href="#exercises">9. Exercises</a></li>
+                    <li><a href="#checkpoints">10. Theory Checkpoints</a></li>
+                    <li><a href="#mini-projects">11. Mini Projects</a></li>
+                    <li><a href="#major-project">12. Major Project</a></li>
+                    <li><a href="#bookstore">13. Bookstore Case Study</a></li>
+                    <li><a href="#architecture">14. Architecture Mapping</a></li>
+                    <li><a href="#interview-prep">15. Interview Prep</a></li>
+                    <li><a href="#mistakes">16. Common Mistakes</a></li>
+                    <li><a href="#best-practices">17. Best Practices</a></li>
+                    <li><a href="#tools">18. Tools & Stack</a></li>
+                    <li><a href="#certifications">19. Certifications</a></li>
+                    <li><a href="#resources">20. Free Resources</a></li>
+                    <li><a href="#documentation">21. Documentation</a></li>
+                    <li><a href="#github-roadmap">22. GitHub Roadmap</a></li>
+                    <li><a href="#resume-projects">23. Resume Projects</a></li>
+                    <li><a href="#outcomes">24. Career Outcomes</a></li>
+                    <li><a href="#next-readiness">25. Next Phase Readiness</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content-area">
+            <div class="content-container">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span>Phase 8: Microservices Architecture</span>
+                </div>
+
+                <div class="animate-fade-in">
+                    <span class="badge badge-warning">Advanced Level</span>
+                    <h1 class="premium-title">Microservices Architecture</h1>
+                    <p class="phase-description">Scale your application to handle millions of users. Learn how to break a monolith into distributed, independently deployable services using Spring Cloud.</p>
+                </div>
+                
+                <section id="overview">
+                    <h2 class="premium-title">1. Phase Overview</h2>
+                    <p>Modern enterprise applications are often built as a collection of distributed services. In this phase, you'll learn the principles of Microservices architecture, how to handle service discovery, configuration management, and resilient communication between services using Spring Cloud. You'll move from monolithic thinking to distributed system design.</p>
+                </section>
+
+                <section id="why-matters">
+                    <h2 class="premium-title">2. Why This Phase Matters</h2>
+                    <div class="tip-box">
+                        <p>Microservices allow teams to develop, deploy, and scale services independently. This architecture is essential for large-scale enterprise applications that require high availability, scalability, and fast deployment cycles. Mastering this phase makes you a distributed systems expert.</p>
+                    </div>
+                </section>
+
+                <section id="theoretical-roadmap">
+                    <h2 class="premium-title">3. Complete Theoretical Roadmap</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Concept</th>
+                                    <th>Internal Working</th>
+                                    <th>Enterprise Benefit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Service Discovery</strong></td>
+                                    <td>Netflix Eureka Server/Client</td>
+                                    <td>Dynamic routing without hardcoded IP addresses.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>API Gateway</strong></td>
+                                    <td>Spring Cloud Gateway & Netty</td>
+                                    <td>Centralized entry point for security and routing.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Circuit Breaker</strong></td>
+                                    <td>Resilience4j State Machine</td>
+                                    <td>Prevents cascading failures in distributed systems.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Config Server</strong></td>
+                                    <td>Git/Vault backed configuration</td>
+                                    <td>Centralized and secure management of properties.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="topic-breakdown">
+                    <h2 class="premium-title">4. Core Topic Breakdown</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Distributed Infrastructure:</strong> Eureka Discovery and Spring Cloud Config.</li>
+                            <li><strong>Inter-service Communication:</strong> REST with OpenFeign and Event-driven with Kafka.</li>
+                            <li><strong>Edge Services:</strong> API Gateway routing, filters, and security.</li>
+                            <li><strong>Resilience Patterns:</strong> Circuit Breakers, Retries, and Rate Limiters.</li>
+                            <li><strong>Observability:</strong> Distributed tracing with Micrometer and Zipkin.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="curriculum">
+                    <h2 class="premium-title">5. Subtopic Curriculum</h2>
+                    <div class="module-card">
+                        <h4>Unit 1: Microservices Infrastructure</h4>
+                        <ul>
+                            <li>Eureka Service Registry and Discovery.</li>
+                            <li>Centralized Configuration with Spring Cloud Config.</li>
+                            <li>Externalizing secrets with HashiCorp Vault.</li>
+                        </ul>
+                        <h4>Unit 2: Distributed Communication</h4>
+                        <ul>
+                            <li>Declarative REST clients with OpenFeign.</li>
+                            <li>Load balancing with Spring Cloud LoadBalancer.</li>
+                            <li>Asynchronous messaging with Spring Cloud Stream and RabbitMQ/Kafka.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="progression">
+                    <h2 class="premium-title">6. Learning Progression</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Foundation</h4>
+                                <p>Set up the basic infrastructure: Eureka and Config Server.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Intermediate</h4>
+                                <p>Implement inter-service communication and an API Gateway.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Advanced</h4>
+                                <p>Implement resilience patterns and distributed tracing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="mastery-roadmap">
+                    <h2 class="premium-title">7. Mastery Roadmap</h2>
+                    <div class="module-card">
+                        <p>To master microservices, you must understand how to manage complexity. You should be able to design a system where services can fail independently without taking down the entire application.</p>
+                    </div>
+                </section>
+
+                <section id="practice-tasks">
+                    <h2 class="premium-title">8. Essential Practice Tasks</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Build a multi-service setup where a <code>User-Service</code> calls an <code>Order-Service</code>.</li>
+                            <li>Configure a fallback mechanism using <code>@CircuitBreaker</code>.</li>
+                            <li>Implement a custom gateway filter for request logging.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="exercises">
+                    <h2 class="premium-title">9. Hands-on Exercises</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Externalize microservice properties to a secure private Git repository.</li>
+                            <li>Implement a rate limiter at the gateway level.</li>
+                            <li>Set up Zipkin to visualize distributed traces across three services.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="checkpoints">
+                    <h2 class="premium-title">10. Theory Checkpoints</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>What is the CAP Theorem and how does it apply to microservices?</li>
+                            <li>How does Eureka handle service heartbeats?</li>
+                            <li>Explain the role of the <code>Bootstrap</code> context in Spring Cloud.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="mini-projects">
+                    <h2 class="premium-title">11. Phase Mini-Projects</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Resilient Gateway:</strong> Build a gateway that automatically retries failed requests.</li>
+                            <li><strong>Config Watcher:</strong> A service that updates its configuration without a restart.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="major-project">
+                    <h2 class="premium-title">12. Major Phase Project</h2>
+                    <div class="project-card">
+                        <h3>Microservice-based Bookstore</h3>
+                        <p>Decompose the monolithic Bookstore into four distinct services: Catalog, Order, Inventory, and Auth. Implement full service discovery, routing, and centralized configuration.</p>
+                        <div class="tag">Spring Cloud</div>
+                        <div class="tag">Eureka</div>
+                        <div class="tag">Gateway</div>
+                        <div class="tag">Resilience4j</div>
+                    </div>
+                </section>
+
+                <section id="bookstore">
+                    <h2 class="premium-title">13. Bookstore Case Study</h2>
+                    <div class="tip-box">
+                        <p><strong>Master Project Integration:</strong> Decomposing the <strong>Bookstore Ecosystem</strong>.</p>
+                        <ul>
+                            <li><code>Catalog-Service</code>: Manages book inventory and metadata.</li>
+                            <li><code>Order-Service</code>: Handles transactions and calls Catalog for stock checks.</li>
+                            <li><code>Inventory-Service</code>: Dedicated stock management with real-time updates.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="architecture">
+                    <h2 class="premium-title">14. Architecture Mapping</h2>
+                    <div class="module-card">
+                        <p>Visualize the transition from a <strong>Layered Monolith</strong> to a <strong>Distributed Mesh</strong>. Understand how services communicate via synchronous (REST) and asynchronous (Events) patterns.</p>
+                    </div>
+                </section>
+
+                <section id="interview-prep">
+                    <h2 class="premium-title">15. Interview Preparation</h2>
+                    <div class="interview-card">
+                        <strong>Q: What is the N+1 problem in microservices?</strong>
+                        <p>A: It's when a client needs data from N services, causing N+1 network calls. Fix it using GraphQL or Backend-for-Frontend (BFF) patterns.</p>
+                    </div>
+                    <div class="interview-card">
+                        <strong>Q: Difference between Orchestration and Choreography?</strong>
+                        <p>A: Orchestration uses a central 'brain' to coordinate; Choreography relies on services reacting to events independently.</p>
+                    </div>
+                </section>
+
+                <section id="mistakes">
+                    <h2 class="premium-title">16. Common Mistakes</h2>
+                    <div class="warning-box">
+                        <strong>Shared Databases:</strong> Avoid the 'Distributed Monolith' by ensuring each service owns its data and communicates only via well-defined APIs.
+                    </div>
+                </section>
+
+                <section id="best-practices">
+                    <h2 class="premium-title">17. Best Practices</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Design for failure: Assume any service can go down at any time.</li>
+                            <li>Keep services small and focused on a single business capability.</li>
+                            <li>Automate everything: From testing to deployment.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="tools">
+                    <h2 class="premium-title">18. Tools & Stack</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Framework:</strong> Spring Cloud 2023.x</li>
+                            <li><strong>Discovery:</strong> Eureka Server</li>
+                            <li><strong>Gateway:</strong> Spring Cloud Gateway</li>
+                            <li><strong>Config:</strong> Spring Cloud Config Server</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="certifications">
+                    <h2 class="premium-title">19. Recommended Certifications</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Spring Professional Certification (VMware)</li>
+                            <li>AWS Certified Developer - Associate</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="resources">
+                    <h2 class="premium-title">20. Free Resources</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li>Microservices.io by Chris Richardson</li>
+                            <li>Spring Cloud Official Reference</li>
+                            <li>Martin Fowler's Microservices Guide</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="documentation">
+                    <h2 class="premium-title">21. Official Documentation</h2>
+                    <div class="module-card">
+                        <p>Reference the official Spring Cloud documentation for detailed configuration of Eureka, Gateway, and Config Server.</p>
+                    </div>
+                </section>
+
+                <section id="github-roadmap">
+                    <h2 class="premium-title">22. GitHub Roadmap</h2>
+                    <div class="module-card">
+                        <p>Maintain a repository for your microservices infrastructure. Focus on Docker Compose files that spin up the entire ecosystem with one command.</p>
+                    </div>
+                </section>
+
+                <section id="resume-projects">
+                    <h2 class="premium-title">23. Resume Projects</h2>
+                    <div class="module-card">
+                        <ul>
+                            <li><strong>Resilient Microservices Ecosystem:</strong> A full suite of services with circuit breakers and distributed tracing.</li>
+                            <li><strong>Event-Driven Order Processing:</strong> High-scale transaction handling using Kafka.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="outcomes">
+                    <h2 class="premium-title">24. Career Outcomes</h2>
+                    <div class="module-card">
+                        <p>Qualify for Cloud Architect, Senior Backend Developer, and Distributed Systems Engineer roles at top-tier tech companies.</p>
+                    </div>
+                </section>
+
+                <section id="next-readiness">
+                    <h2 class="premium-title">25. Next Phase Readiness</h2>
+                    <div class="module-card">
+                        <p>You are ready for <strong>Phase 9: DevOps & Cloud</strong> once you can design and implement a distributed system with at least three interacting services.</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer class="premium-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>JavaAcademy</h2>
+                <p>Building the next generation of Enterprise Architects.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Back to Roadmap</a></li>
+                    <li><a href="phase9-devops.html">Next: Phase 9</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: #94a3b8; font-size: 0.85rem;">
+            &copy; 2026 Java Enterprise Academy. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>
