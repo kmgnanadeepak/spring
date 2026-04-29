@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources | Java Enterprise Academy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body id="resources-page">
     <header class="navbar">
@@ -32,44 +34,297 @@
 
         <section class="content-area">
             <div class="content-container">
-                <div class="animate-fade-in resource-grid">
-                    <div class="phase-card">
-                        <h3 class="premium-title">Official Documentation</h3>
-                        <ul class="resource-list">
-                            <li><a href="#"><span>&rarr;</span> Oracle Java Documentation</a></li>
-                            <li><a href="#"><span>&rarr;</span> Spring Framework Reference</a></li>
-                            <li><a href="#"><span>&rarr;</span> Spring Boot Documentation</a></li>
-                            <li><a href="#"><span>&rarr;</span> Hibernate ORM Guide</a></li>
-                        </ul>
+                <!-- Search & Filter -->
+                <div class="resource-search-filter animate-fade-in">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="resourceSearch" placeholder="Search topics, phases, or resources...">
                     </div>
-
-                    <div class="phase-card">
-                        <h3 class="premium-title">Must-Read Books</h3>
-                        <ul class="resource-list">
-                            <li><span class="icon">•</span> <em>Effective Java</em> by Joshua Bloch</li>
-                            <li><span class="icon">•</span> <em>Clean Code</em> by Robert C. Martin</li>
-                            <li><span class="icon">•</span> <em>Spring in Action</em> by Craig Walls</li>
-                            <li><span class="icon">•</span> <em>Building Microservices</em> by Sam Newman</li>
-                        </ul>
+                    <div class="filter-group">
+                        <button class="filter-btn active" data-filter="all">All Phases</button>
+                        <button class="filter-btn" data-filter="beginner">Beginner</button>
+                        <button class="filter-btn" data-filter="intermediate">Intermediate</button>
+                        <button class="filter-btn" data-filter="advanced">Advanced</button>
                     </div>
+                    <a href="#" id="downloadRoadmap" class="btn-premium download-roadmap-btn">
+                        <i class="fas fa-download"></i> Download Roadmap PDF
+                    </a>
+                </div>
 
-                    <div class="phase-card">
-                        <h3 class="premium-title">Essential Tools</h3>
-                        <ul class="resource-list">
-                            <li><span class="icon" style="color: var(--highlight);">✔</span> IntelliJ IDEA (Recommended)</li>
-                            <li><span class="icon" style="color: var(--highlight);">✔</span> Docker Desktop</li>
-                            <li><span class="icon" style="color: var(--highlight);">✔</span> Postman / Insomnia</li>
-                            <li><span class="icon" style="color: var(--highlight);">✔</span> Git & GitHub</li>
-                        </ul>
+                <!-- PHASE 1: Java Fundamentals -->
+                <div class="resource-section" data-phase="1" data-difficulty="beginner">
+                    <div class="resource-section-header">
+                        <div class="resource-section-title">
+                            <span class="phase-number">PHASE 1</span>
+                            <h2 class="premium-title">Java Fundamentals</h2>
+                        </div>
+                        <div class="resource-section-meta">
+                            <span class="difficulty-badge diff-beginner">Beginner</span>
+                            <span class="badge badge-info">⏱️ 4 Weeks</span>
+                            <span class="toggle-icon">&plus;</span>
+                        </div>
+                    </div>
+                    <div class="resource-section-content">
+                        <div class="resource-card">
+                            <span class="resource-category-label">Core Syntax</span>
+                            <h4>Java Basics & Logic</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-book-open"></i> Documentation</h5>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Variables & Data Types</a>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Control Statements (If-Else, Switch)</a>
+                            </div>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-video"></i> Best Tutorials</h5>
+                                <a href="#" class="resource-link-item"><i class="fab fa-youtube"></i> Java for Beginners - Telusko</a>
+                                <a href="#" class="resource-link-item"><i class="fab fa-youtube"></i> Java Full Course - FreeCodeCamp</a>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="resource-category-label">Data Structures</span>
+                            <h4>Arrays & Strings</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-book-open"></i> Documentation</h5>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Working with Arrays</a>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> String Manipulation in Java</a>
+                            </div>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-code"></i> Practice</h5>
+                                <a href="#" class="resource-link-item"><i class="fas fa-laptop-code"></i> HackerRank Java Challenges</a>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="resource-category-label">Hands-on</span>
+                            <h4>Phase 1 Projects</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-project-diagram"></i> Suggested Projects</h5>
+                                <p class="resource-link-item">Student Grading System</p>
+                                <p class="resource-link-item">Basic Calculator CLI</p>
+                                <p class="resource-link-item">Simple ATM Console App</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PHASE 2: Object-Oriented Programming -->
+                <div class="resource-section" data-phase="2" data-difficulty="beginner">
+                    <div class="resource-section-header">
+                        <div class="resource-section-title">
+                            <span class="phase-number">PHASE 2</span>
+                            <h2 class="premium-title">OOP Mastery</h2>
+                        </div>
+                        <div class="resource-section-meta">
+                            <span class="difficulty-badge diff-beginner">Beginner</span>
+                            <span class="badge badge-info">⏱️ 3 Weeks</span>
+                            <span class="toggle-icon">&plus;</span>
+                        </div>
+                    </div>
+                    <div class="resource-section-content">
+                        <div class="resource-card">
+                            <span class="resource-category-label">Core OOPs</span>
+                            <h4>Classes & Objects</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-book-open"></i> Documentation</h5>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Classes & Constructors</a>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Interfaces & Abstraction</a>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="resource-category-label">Pillars of OOP</span>
+                            <h4>Inheritance & Polymorphism</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-book-open"></i> Documentation</h5>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Inheritance Guide</a>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Polymorphism in Action</a>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="resource-category-label">Hands-on</span>
+                            <h4>Phase 2 Projects</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-project-diagram"></i> Suggested Projects</h5>
+                                <p class="resource-link-item">Library Management System</p>
+                                <p class="resource-link-item">Employee Payroll CLI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PHASE 3: Advanced Java -->
+                <div class="resource-section" data-phase="3" data-difficulty="intermediate">
+                    <div class="resource-section-header">
+                        <div class="resource-section-title">
+                            <span class="phase-number">PHASE 3</span>
+                            <h2 class="premium-title">Advanced Java</h2>
+                        </div>
+                        <div class="resource-section-meta">
+                            <span class="difficulty-badge diff-intermediate">Intermediate</span>
+                            <span class="badge badge-info">⏱️ 5 Weeks</span>
+                            <span class="toggle-icon">&plus;</span>
+                        </div>
+                    </div>
+                    <div class="resource-section-content">
+                        <div class="resource-card">
+                            <span class="resource-category-label">Data Management</span>
+                            <h4>Collections & Generics</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-book-open"></i> Documentation</h5>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Collections Framework</a>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Java Generics Guide</a>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="resource-category-label">Functional Java</span>
+                            <h4>Streams & Lambdas</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-book-open"></i> Documentation</h5>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Streams API Reference</a>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Lambda Expressions</a>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="resource-category-label">Concurrency</span>
+                            <h4>Multithreading</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-book-open"></i> Documentation</h5>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Threading & Concurrency</a>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Executor Framework</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PHASE 4: Database Foundations -->
+                <div class="resource-section" data-phase="4" data-difficulty="intermediate">
+                    <div class="resource-section-header">
+                        <div class="resource-section-title">
+                            <span class="phase-number">PHASE 4</span>
+                            <h2 class="premium-title">Database Mastery</h2>
+                        </div>
+                        <div class="resource-section-meta">
+                            <span class="difficulty-badge diff-intermediate">Intermediate</span>
+                            <span class="badge badge-info">⏱️ 3 Weeks</span>
+                            <span class="toggle-icon">&plus;</span>
+                        </div>
+                    </div>
+                    <div class="resource-section-content">
+                        <div class="resource-card">
+                            <span class="resource-category-label">SQL</span>
+                            <h4>Relational Databases</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-book-open"></i> Documentation</h5>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> PostgreSQL/MySQL Basics</a>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> SQL Joins & Optimization</a>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="resource-category-label">ORM</span>
+                            <h4>Hibernate & JPA</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-book-open"></i> Documentation</h5>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Hibernate ORM Guide</a>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Spring Data JPA</a>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="resource-category-label">Connectivity</span>
+                            <h4>JDBC Integration</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-book-open"></i> Documentation</h5>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> JDBC Reference</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PHASE 5: Spring Framework -->
+                <div class="resource-section" data-phase="5" data-difficulty="advanced">
+                    <div class="resource-section-header">
+                        <div class="resource-section-title">
+                            <span class="phase-number">PHASE 5</span>
+                            <h2 class="premium-title">Spring Framework</h2>
+                        </div>
+                        <div class="resource-section-meta">
+                            <span class="difficulty-badge diff-advanced">Advanced</span>
+                            <span class="badge badge-info">⏱️ 4 Weeks</span>
+                            <span class="toggle-icon">&plus;</span>
+                        </div>
+                    </div>
+                    <div class="resource-section-content">
+                        <div class="resource-card">
+                            <span class="resource-category-label">Spring Core</span>
+                            <h4>Dependency Injection</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-book-open"></i> Documentation</h5>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Spring IoC Container</a>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Bean Life Cycle</a>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="resource-category-label">Web</span>
+                            <h4>Spring MVC & REST</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-book-open"></i> Documentation</h5>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Spring Web MVC</a>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> RESTful Web Services</a>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="resource-category-label">Safety</span>
+                            <h4>Spring Security</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-book-open"></i> Documentation</h5>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Security Basics</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PHASE 6: Spring Boot Mastery -->
+                <div class="resource-section" data-phase="6" data-difficulty="advanced">
+                    <div class="resource-section-header">
+                        <div class="resource-section-title">
+                            <span class="phase-number">PHASE 6</span>
+                            <h2 class="premium-title">Spring Boot Mastery</h2>
+                        </div>
+                        <div class="resource-section-meta">
+                            <span class="difficulty-badge diff-advanced">Advanced</span>
+                            <span class="badge badge-info">⏱️ 6 Weeks</span>
+                            <span class="toggle-icon">&plus;</span>
+                        </div>
+                    </div>
+                    <div class="resource-section-content">
+                        <div class="resource-card">
+                            <span class="resource-category-label">Boot Basics</span>
+                            <h4>Auto-Configuration</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-book-open"></i> Documentation</h5>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Spring Boot Reference</a>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Starters & Dependencies</a>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="resource-category-label">Advanced Architecture</span>
+                            <h4>Microservices & Docker</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-book-open"></i> Documentation</h5>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Spring Cloud Services</a>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Docker for Java Apps</a>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="resource-category-label">Production</span>
+                            <h4>Deployment & CI/CD</h4>
+                            <div class="resource-links-group">
+                                <h5><i class="fas fa-book-open"></i> Documentation</h5>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> Monitoring with Actuator</a>
+                                <a href="#" class="resource-link-item"><i class="fas fa-link"></i> CI/CD with Jenkins/GitHub Actions</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="tip-box mt-5">
                     <strong>Industry Pro-Tip:</strong> Always keep the official Spring documentation bookmarked. It is the single most authoritative and up-to-date resource for enterprise Java development.
-                </div>
-
-                <div class="animate-fade-in mt-4 text-center">
-                    <p style="color: var(--text-muted);">Missing a resource? <a href="contact.html" style="color: var(--highlight);">Suggest one here</a>.</p>
                 </div>
             </div>
         </section>
